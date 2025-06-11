@@ -477,6 +477,7 @@ a {
     color: #e06d6e;
     font-weight: 600;
     margin-bottom: 5px;
+    text-align: left;
 }
 
 .doctor-details {
@@ -1364,7 +1365,7 @@ a {
     
     /* 2番目の医師の場合は右寄せ */
     .expertise-content:nth-child(2) .doctor-info h3 {
-        text-align: right;
+        text-align: left;
     }
     
     .expertise-content:nth-child(2) .credentials {

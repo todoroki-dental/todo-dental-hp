@@ -1,0 +1,23 @@
+# ✅ ブランチを切る（作って移動）
+git checkout -b ブランチ名
+
+# ✅ ブランチに移動する
+git checkout ブランチ名
+
+# ✅ 今のブランチを確認する
+git branch
+
+# ✅ ブランチにコミットする
+git add .
+git commit -m "コミットメッセージ"
+git push -u origin ブランチ名  # 初回のみ -u、2回目以降は git push
+
+# ✅ main にマージする
+git checkout main
+git pull                      # 最新のmainを取得
+git merge ブランチ名
+git push
+
+# ✅ 古いブランチを削除する
+git branch -d ブランチ名              # ローカルから削除
+git push origin --delete ブランチ名   # GitHubからも削除
