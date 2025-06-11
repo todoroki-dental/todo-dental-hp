@@ -161,10 +161,40 @@ a {
     align-items: center;
 }
 
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .logo {
     font-size: 24px;
     font-weight: 700;
     color: #e06d6e;
+}
+
+.header-keywords {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.keyword-tag {
+    background: #e06d6e;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(224, 109, 110, 0.3);
+}
+
+.keyword-tag:hover {
+    background: #d84545;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(224, 109, 110, 0.4);
 }
 
 .header-contact {
@@ -1227,6 +1257,34 @@ a {
     border-top: 1px solid #555;
     color: #ccc;
     font-size: 14px;
+}
+
+/* スマホ対応用ヘッダー調整 */
+@media (max-width: 767px) {
+    .header-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .header-keywords {
+        gap: 4px;
+    }
+    
+    .keyword-tag {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .header-contact {
+        text-align: center;
+    }
 }
 
 /* タブレット対応 (768px以上) */
