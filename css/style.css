@@ -305,7 +305,7 @@ a {
 /* ペイン共感セクション */
 .pain-section {
     padding: 80px 0;
-    background: #f8f9fa;
+    background: #e06d6f6d;
 }
 
 .pain-grid {
@@ -329,7 +329,7 @@ a {
 
 .pain-icon {
     font-size: 48px;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 }
 
 .pain-item h3 {
@@ -646,11 +646,12 @@ a {
 
 .menu-item {
     background: white;
-    padding: 30px;
     border-radius: 15px;
-    text-align: center;
+    overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .menu-item:hover {
@@ -658,7 +659,8 @@ a {
 }
 
 .menu-link {
-    display: block;
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
     color: inherit;
     height: 100%;
@@ -669,41 +671,69 @@ a {
     text-decoration: none;
 }
 
-.menu-icon {
-    font-size: 40px;
-    margin-bottom: 15px;
+.menu-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
 }
 
-.menu-item h3 {
+.menu-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover .menu-image img {
+    transform: scale(1.05);
+}
+
+.menu-content {
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.menu-content h3 {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 15px;
     color: #e06d6e;
 }
 
-.menu-item p {
+.menu-content p {
     margin-bottom: 20px;
     color: #666;
+    flex-grow: 1;
+    font-weight: 600;
 }
 
-.menu-item ul {
+.menu-content ul {
     list-style: none;
     text-align: left;
 }
 
-.menu-item li {
+.menu-content li {
     padding: 5px 0;
     padding-left: 20px;
     position: relative;
     color: #666;
 }
 
-.menu-item li::before {
+.menu-content li::before {
     content: "•";
     position: absolute;
     left: 0;
     color: #e06d6e;
     font-weight: 600;
+}
+
+/* メニューアイコンスタイル（他のメニューアイテム用） */
+.menu-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
 }
 
 /* 料金・治療の流れセクション */
@@ -1380,6 +1410,10 @@ a {
         grid-template-columns: repeat(2, 1fr);
     }
     
+    .menu-image {
+        height: 180px;
+    }
+    
     .price-flow-content {
         grid-template-columns: 1fr 1fr;
     }
@@ -1435,6 +1469,10 @@ a {
     
     .menu-grid {
         grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .menu-image {
+        height: 160px;
     }
     
     .cert-logos {
