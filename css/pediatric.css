@@ -1,0 +1,386 @@
+/* 小児歯科専用スタイル */
+
+/* ページヘッダーの小児歯科向けスタイリング */
+.pediatric-header {
+    background: linear-gradient(135deg, #FFF8E1 0%, #FFE0B2 100%);
+    border-bottom: 3px solid #FF9800;
+}
+
+.pediatric-header .page-title {
+    color: #FF6F00;
+}
+
+.pediatric-header .page-subtitle {
+    color: #E65100;
+}
+
+/* 小児歯科の特徴セクション */
+.pediatric-features-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #FFF3E0 0%, #FFECB3 50%, #FFF8E1 100%);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(255, 152, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid #FF9800;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(255, 152, 0, 0.2);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.feature-card h3 {
+    color: #FF6F00;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.feature-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.feature-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* 小児歯科専用のメニューハイライト */
+.pediatric-highlight {
+    background: linear-gradient(135deg, #E1F5FE 0%, #B3E5FC 100%);
+    border-left: 4px solid #03A9F4;
+}
+
+.pediatric-highlight h3 {
+    color: #0277BD;
+}
+
+/* 年齢別ケアガイド */
+.age-guide-section {
+    padding: 5rem 0;
+    background: #FAFAFA;
+}
+
+.age-guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.age-guide-item {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.age-guide-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #FF9800, #FFC107);
+}
+
+.age-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #FF9800, #FFC107);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.age-guide-item h3 {
+    color: #FF6F00;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.age-content {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.age-points h4,
+.age-care h4 {
+    color: #E65100;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid #FFE0B2;
+    padding-bottom: 0.5rem;
+}
+
+.age-points ul,
+.age-care ul {
+    list-style: none;
+    padding: 0;
+}
+
+.age-points li,
+.age-care li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.age-points li::before {
+    content: "📍";
+    position: absolute;
+    left: 0;
+    font-size: 0.8rem;
+}
+
+.age-care li::before {
+    content: "💡";
+    position: absolute;
+    left: 0;
+    font-size: 0.8rem;
+}
+
+/* 親御さんへのメッセージセクション */
+.parent-message-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #E8F5E8 0%, #C8E6C9 100%);
+}
+
+.parent-message-content {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 4rem;
+    align-items: center;
+}
+
+.parent-message-text h2 {
+    color: #2E7D32;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.message-lead {
+    font-size: 1.1rem;
+    color: #388E3C;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.parent-benefits {
+    margin-bottom: 2rem;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 10px rgba(46, 125, 50, 0.1);
+}
+
+.benefit-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.benefit-text h3 {
+    color: #2E7D32;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.benefit-text p {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.parent-cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.parent-cta p {
+    color: #388E3C;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.parent-message-image {
+    text-align: center;
+}
+
+.parent-message-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 8px 30px rgba(46, 125, 50, 0.2);
+}
+
+/* FAQセクションの小児歯科向けスタイリング */
+.faq-section {
+    background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%);
+}
+
+.faq-item {
+    border-left: 4px solid #9C27B0;
+}
+
+.faq-question h3 {
+    color: #7B1FA2;
+}
+
+.faq-answer {
+    background: rgba(156, 39, 176, 0.05);
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .feature-card {
+        padding: 1.5rem;
+    }
+    
+    .age-guide-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .age-guide-item {
+        padding: 1.5rem;
+    }
+    
+    .parent-message-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .parent-message-image {
+        order: -1;
+    }
+    
+    .benefit-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .benefit-icon {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pediatric-features-section {
+        padding: 3rem 0;
+    }
+    
+    .age-guide-section {
+        padding: 3rem 0;
+    }
+    
+    .parent-message-section {
+        padding: 3rem 0;
+    }
+    
+    .feature-card {
+        padding: 1.25rem;
+    }
+    
+    .age-guide-item {
+        padding: 1.25rem;
+    }
+    
+    .parent-message-text h2 {
+        font-size: 1.5rem;
+    }
+    
+    .message-lead {
+        font-size: 1rem;
+    }
+}
+
+/* 小児歯科向けアクセシビリティ改善 */
+.feature-card:focus-within,
+.age-guide-item:focus-within,
+.benefit-item:focus-within {
+    outline: 2px solid #FF9800;
+    outline-offset: 2px;
+}
+
+/* 印刷時の調整 */
+@media print {
+    .pediatric-features-section,
+    .age-guide-section,
+    .parent-message-section {
+        background: white !important;
+        padding: 2rem 0 !important;
+    }
+    
+    .feature-card,
+    .age-guide-item,
+    .benefit-item {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        break-inside: avoid;
+    }
+}

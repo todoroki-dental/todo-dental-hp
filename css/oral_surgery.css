@@ -1,0 +1,520 @@
+/* 口腔外科ページ専用スタイル */
+
+/* スペシャリストメッセージセクション */
+.specialist-message {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #e06d6e 0%, #d84545 100%);
+    color: white;
+}
+
+.message-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* gap: 3.125rem; */
+    align-items: center;
+}
+
+.message-text h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+
+.message-subtitle {
+    font-size: 1.125rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+.specialist-points {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.875rem;
+}
+
+.message-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.specialist-doctor-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.point-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5625rem;
+    border-radius: 0.9375rem;
+    backdrop-filter: blur(10px);
+}
+
+.point-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.point-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.625rem;
+}
+
+.point-content p {
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.specialist-doctor {
+    display: flex;
+    justify-content: center;
+}
+
+.doctor-card {
+    background: white;
+    padding: 1.875rem;
+    border-radius: 0.9375rem;
+    text-align: center;
+    box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.2);
+    max-width: 18.75rem;
+    height: 25rem;
+}
+
+.doctor-card .doctor-image img {
+    width: 6.25rem;
+    height: 6.25rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 1.25rem;
+    border: 0.25rem solid #e06d6e;
+}
+
+.doctor-card .doctor-info h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.625rem;
+}
+
+.doctor-title {
+    color: #e06d6e;
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 0.625rem;
+}
+
+.doctor-experience {
+    color: #666;
+    font-size: 0.875rem;
+    margin-bottom: 1.25rem;
+}
+
+.doctor-schedule {
+    color: #333;
+    font-size: 0.875rem;
+}
+
+/* 治療メニューセクション */
+.treatment-menu {
+    padding: 5rem 0;
+    background: #f8f9fa;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1.25rem;
+}
+
+.section-header p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.treatment-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+.treatment-item {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 0.9375rem;
+    box-shadow: 0 0.5rem 1.5625rem rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.treatment-item:hover {
+    transform: translateY(-0.3125rem);
+}
+
+.treatment-icon {
+    font-size: 3rem;
+    margin-bottom: 1.25rem;
+}
+
+.treatment-item h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #e06d6e;
+    margin-bottom: 0.9375rem;
+}
+
+.treatment-item p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+}
+
+.treatment-details {
+    list-style: none;
+    text-align: left;
+    max-width: 18.75rem;
+    margin: 0 auto;
+}
+
+.treatment-details li {
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+    color: #666;
+}
+
+.treatment-details li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #e06d6e;
+    font-weight: 600;
+}
+
+/* 症例紹介セクション */
+.case-studies {
+    padding: 5rem 0;
+    background: white;
+}
+
+.case-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.case-item {
+    background: white;
+    border-radius: 0.9375rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1.5625rem rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.case-item:hover {
+    transform: translateY(-0.3125rem);
+}
+
+.case-image img {
+    width: 100%;
+    height: 15.625rem;
+    object-fit: cover;
+}
+
+.case-content {
+    padding: 1.875rem;
+}
+
+.case-content h3 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: #e06d6e;
+    margin-bottom: 1.5rem;
+}
+
+.case-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+    background: #f8f9fa;
+    border-radius: 0.625rem;
+}
+
+.case-detail {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.0625rem solid #eee;
+}
+
+.case-detail:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #e06d6e;
+    min-width: 3.75rem;
+}
+
+.detail-value {
+    color: #333;
+    text-align: right;
+}
+
+.case-description {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.9375rem;
+}
+
+/* 料金表セクション */
+.price-table {
+    padding: 5rem 0;
+    background: #f8f9fa;
+}
+
+.price-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.price-category {
+    background: white;
+    padding: 1.875rem;
+    border-radius: 0.9375rem;
+    box-shadow: 0 0.25rem 0.9375rem rgba(0,0,0,0.1);
+}
+
+.price-category h3 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: #e06d6e;
+    margin-bottom: 1.25rem;
+    text-align: center;
+    padding-bottom: 0.9375rem;
+    border-bottom: 0.125rem solid #e06d6e;
+}
+
+.price-note {
+    margin-bottom: 1.875rem;
+    text-align: center;
+    color: #666;
+    font-size: 0.875rem;
+}
+
+.price-note p {
+    margin-bottom: 0.25rem;
+}
+
+.price-note p:last-child {
+    margin-bottom: 0;
+}
+
+.price-items {
+    display: grid;
+    gap: 0.9375rem;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.9375rem 0;
+    border-bottom: 0.0625rem solid #eee;
+}
+
+.price-item:last-child {
+    border-bottom: none;
+}
+
+.price-name {
+    color: #333;
+    font-weight: 500;
+}
+
+.price-value {
+    color: #e06d6e;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* 支払い方法 */
+.payment-info {
+    margin-top: 2.5rem;
+    padding: 1.875rem;
+    background: white;
+    border-radius: 0.9375rem;
+    box-shadow: 0 0.25rem 0.9375rem rgba(0,0,0,0.1);
+}
+
+.payment-info h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.5625rem;
+    text-align: center;
+}
+
+.payment-methods {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+.payment-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: #f8f9fa;
+    border-radius: 0.625rem;
+    transition: all 0.3s ease;
+}
+
+.payment-item:hover {
+    background: #e9ecef;
+    transform: translateY(-0.125rem);
+}
+
+.payment-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.payment-content h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.25rem;
+}
+
+.payment-content p {
+    color: #666;
+    font-size: 0.875rem;
+}
+
+/* タブレット対応 (768px以上) */
+@media (min-width: 768px) {
+    .section-header h2 {
+        font-size: 2.25rem;
+        margin-bottom: 1.5625rem;
+    }
+
+    .message-content {
+        /* grid-template-columns: 1fr 1fr; */
+        gap: 0.75rem;
+    }
+
+    .message-content h2{
+        font-size: 3rem;
+    }
+
+    .message-wrapper{
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .specialist-doctor-wrapper{
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+    
+    .message-text {
+        text-align: left;
+    }
+    
+    .message-text h2 {
+        text-align: left;
+        font-size: 2.25rem;
+    }
+    
+    .message-subtitle {
+        text-align: left;
+    }
+    
+    .specialist-points {
+        gap: 1.25rem;
+    }
+    
+    .point-item {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .treatment-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* .case-grid {
+        grid-template-columns: repeat(2, 1fr);
+    } */
+    
+    .case-details {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .price-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .payment-methods {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .case-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        align-items: center;
+    }
+    
+    .case-item:nth-child(even) .case-image {
+        order: 2;
+    }
+    
+    .case-item:nth-child(even) .case-content {
+        order: 1;
+    }
+}
+
+/* デスクトップ対応 (1024px以上) */
+@media (min-width: 1024px) {
+    .specialist-points {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .treatment-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .case-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .case-image img {
+        height: 12.5rem;
+    }
+}

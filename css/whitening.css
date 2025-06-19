@@ -1,0 +1,625 @@
+/* ホワイトニング専用スタイル */
+
+/* ページヘッダーのホワイトニング向けスタイリング */
+.whitening-header {
+    background: #f8f9fa;
+    border-bottom: 3px solid #e06d6e;
+}
+
+.whitening-header .page-title {
+    color: #e06d6e;
+}
+
+.whitening-header .page-subtitle {
+    color: #333;
+}
+
+/* ホワイトニングの種類セクション */
+.whitening-types-section {
+    padding: 5rem 0;
+    background: #f8f9fa;
+}
+
+.types-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.type-card {
+    background: white;
+    border-radius: 0.9375rem;
+    padding: 2rem;
+    box-shadow: 0 0.5rem 1.5625rem rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.dual-whitening {
+    background: #e06d6f4d;
+}
+
+.type-card:hover {
+    transform: translateY(-0.3125rem);
+}
+
+.type-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #e06d6e;
+}
+
+.dual-whitening::before {
+    background: linear-gradient(90deg, #e06d6e, #d84545);
+}
+
+.type-icon {
+    font-size: 3rem;
+    margin-bottom: 1.25rem;
+    display: block;
+}
+
+.type-card h3 {
+    color: #e06d6e;
+    font-size: 1.375rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.type-subtitle {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.type-features {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.type-features h4 {
+    color: #e06d6e;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.type-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.type-features li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.type-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #e06d6e;
+    font-weight: 600;
+}
+
+.type-details {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    color: #666;
+    font-weight: 500;
+}
+
+.detail-value {
+    color: #333;
+    font-weight: 600;
+}
+
+.type-price {
+    background: #e06d6e;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: -2rem -2rem -2rem -2rem;
+    margin-top: 1.5rem;
+}
+
+.type-price.recommended {
+    background: linear-gradient(135deg, #e06d6e, #d84545);
+    position: relative;
+}
+
+/* .type-price.recommended::before {
+    content: "おすすめ！";
+    position: absolute;
+    top: -36rem;
+    right: 7.5rem;
+    background: #ff9800;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+} */
+
+.price-label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+.price-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: block;
+}
+
+.price-note {
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    opacity: 0.8;
+}
+
+/* 比較表セクション */
+.comparison-section {
+    padding: 5rem 0;
+    background: white;
+}
+
+.comparison-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 3rem;
+}
+
+.comparison-table {
+    background: white;
+    border-radius: 0.9375rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1.5625rem rgba(0,0,0,0.1);
+    min-width: 600px;
+}
+
+.comparison-header {
+    display: grid;
+    grid-template-columns: 12.5rem repeat(2, 1fr);
+    background: #e06d6e;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+
+.comparison-header .comparison-item {
+    padding: 1.5rem 1rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.comparison-header .comparison-item:last-child {
+    border-right: none;
+}
+
+.comparison-row {
+    display: grid;
+    grid-template-columns: 12.5rem repeat(2, 1fr);
+    border-bottom: 1px solid #eee;
+}
+
+.comparison-row:last-child {
+    border-bottom: none;
+}
+
+.comparison-label {
+    padding: 1.5rem 1rem;
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #e06d6e;
+    border-right: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+.comparison-cell {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-right: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 7.5rem;
+}
+
+.comparison-cell:last-child {
+    border-right: none;
+}
+
+.comparison-cell.excellent {
+    background: #f8f9fa;
+}
+
+.comparison-cell.good {
+    background: #f8f9fa;
+}
+
+.comparison-cell.fair {
+    background: #f8f9fa;
+}
+
+.rating {
+    font-size: 1.1rem;
+    color: #e06d6e;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.comparison-cell p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* 治療の流れセクション */
+.treatment-flow-section {
+    padding: 5rem 0;
+    background: #f8f9fa;
+}
+
+/* タブスタイル */
+.flow-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.flow-tab {
+    background: white;
+    border: 2px solid #e06d6e;
+    color: #e06d6e;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.flow-tab.active,
+.flow-tab:hover {
+    background: #e06d6e;
+    color: white;
+}
+
+.flow-content {
+    display: none;
+}
+
+.flow-content.active {
+    display: block;
+}
+
+.flow-container {
+    margin-top: 3rem;
+}
+
+.flow-item {
+    background: white;
+    border-radius: 0.9375rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0.5rem 1.5625rem rgba(0,0,0,0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+#office-flow .flow-item {
+    background: #e06d6f4d;
+}
+
+.flow-number {
+    position: absolute;
+    top: 0.625rem;
+    left: 1rem;
+    background: #e06d6e;
+    color: white;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 0.25rem 0.9375rem rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.flow-content-inner {
+    padding: 2rem;
+    padding-top: 2.5rem;
+}
+
+.flow-content-inner h3 {
+    color: #e06d6e;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.flow-details {
+    display: grid;
+    grid-template-columns: 12.5rem 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.flow-image img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.9375rem rgba(0,0,0,0.1);
+}
+
+.flow-text p {
+    color: #e06d6e;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.flow-text ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.flow-text li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.flow-text li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #e06d6e;
+    font-weight: 600;
+}
+
+.flow-point {
+    background: #f8f9fa;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border-left: 3px solid #e06d6e;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.point-icon {
+    margin-right: 0.5rem;
+}
+
+/* FAQセクション */
+.faq-section {
+    padding: 5rem 0;
+    background: white;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 3rem auto 0;
+}
+
+.faq-item {
+    background: white;
+    border-radius: 0.9375rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0.25rem 0.9375rem rgba(0,0,0,0.1);
+    border-left: 4px solid #e06d6e;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #f8f9fa;
+}
+
+.faq-question h3 {
+    color: #e06d6e;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    flex: 1;
+}
+
+.faq-toggle {
+    color: #e06d6e;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: #f8f9fa;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+}
+
+.faq-answer p {
+    padding: 1.5rem 2rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .types-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .type-card {
+        padding: 1.5rem;
+    }
+    
+    .flow-tabs {
+        gap: 0.5rem;
+    }
+    
+    .flow-tab {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .flow-details {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .flow-image {
+        order: -1;
+    }
+
+    .flow-number {
+        position: absolute;
+        top: 0.625rem;
+        left: 1rem;
+    }
+    
+    .faq-question {
+        padding: 1rem 1.5rem;
+    }
+    
+    .faq-answer p {
+        padding: 1rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .whitening-types-section,
+    .comparison-section,
+    .treatment-flow-section,
+    .faq-section {
+        padding: 3rem 0;
+    }
+    
+    .type-card {
+        padding: 1.25rem;
+    }
+    
+    .flow-content-inner {
+        padding: 1.5rem;
+    }
+    
+    .flow-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .flow-tab {
+        width: 200px;
+        text-align: center;
+    }
+}
+
+/* JavaScript連携 */
+.flow-tab[data-target="office-flow"].active ~ #office-flow,
+.flow-tab[data-target="home-flow"].active ~ #home-flow {
+    display: block;
+}
+
+/* アクセシビリティ改善 */
+.type-card:focus-within,
+.faq-item:focus-within {
+    outline: 2px solid #e06d6e;
+    outline-offset: 2px;
+}
+
+.flow-tab:focus {
+    outline: 2px solid #e06d6e;
+    outline-offset: 2px;
+}
+
+/* 印刷時の調整 */
+@media print {
+    .whitening-types-section,
+    .comparison-section,
+    .treatment-flow-section,
+    .faq-section {
+        background: white !important;
+        padding: 2rem 0 !important;
+    }
+    
+    .type-card,
+    .flow-item,
+    .faq-item {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        break-inside: avoid;
+    }
+    
+    .flow-tabs {
+        display: none;
+    }
+    
+    .flow-content {
+        display: block !important;
+    }
+    
+    .faq-answer {
+        max-height: none !important;
+    }
+}
