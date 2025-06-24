@@ -138,7 +138,7 @@ a {
 .cta-phone,
 .cta-web {
     flex: 1;
-    padding: 1rem;
+    padding: 0.7rem;
     text-align: center;
     font-weight: 600;
     color: white;
@@ -613,7 +613,7 @@ a {
 
 .pain-item {
     background: white;
-    padding: 1.875rem;
+    padding: 1rem 1.875rem;
     border-radius: 0.9375rem;
     text-align: center;
     box-shadow: 0 0.25rem 0.9375rem rgba(0,0,0,0.1);
@@ -626,7 +626,7 @@ a {
 
 .pain-icon {
     font-size: 3rem;
-    margin-bottom: 0.9375rem;
+    margin-bottom: 0.2rem;
 }
 
 .pain-icon img{
@@ -713,6 +713,32 @@ a {
     font-weight: 600;
 }
 
+/* ctaボタン */
+.cta-tell{
+    padding: 1.5rem 0;
+    display: flex;
+    /* justify-content: center; */
+    background-color: #e06d6e;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-tell p{
+    color: white;
+    font-size: 1rem;
+}
+
+.tel-number-cta{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #e06d6e;
+    background-color: white;
+    padding: 0.3rem 2.5rem;
+    border-radius: 3.125rem;
+    border: 2px solid #e06d6e;
+    margin-top: 1rem;
+}
+
 /* 専門性セクション */
 .expertise-section {
     padding: 3rem 0;
@@ -789,7 +815,11 @@ a {
     color: #e06d6e;
     font-weight: 600;
     margin-bottom: 0.3125rem;
-    text-align: left;
+    text-align: center;
+}
+
+.otherDr p {
+    font-size: 1rem;
 }
 
 .doctor-details {
@@ -836,7 +866,7 @@ a {
 }
 
 .schedule-treatment {
-    margin-top: 1.875rem;
+    margin-top: 0.5rem;
     padding: 1.5625rem;
     background: #f8f9fa;
     border-radius: 0.625rem;
@@ -854,6 +884,7 @@ a {
     color: #333;
     text-align: center;
 }
+
 
 .schedule-grid {
     display: grid;
@@ -1632,6 +1663,7 @@ a {
     grid-template-columns: 1fr;
     gap: 1.875rem;
     margin-bottom: 1.875rem;
+    text-align: center;
 }
 
 .footer-info h3 {
@@ -1742,7 +1774,7 @@ a {
     }
     
     .feature-item{
-        padding: 1.5rem 0.75rem;
+        padding: 1.5rem 0.62rem;
     }
 
     .hero-cta {
@@ -1792,7 +1824,7 @@ a {
         grid-template-columns: 1fr 12.5rem;
     }
     
- 
+
     
     .doctor-info h3 {
         text-align: left;
