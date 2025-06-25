@@ -1,0 +1,440 @@
+.breadcrumb {
+    background: #f8f9fa;
+    padding: 0.9375rem 0;
+    /* margin-top: 4.375rem; */
+}
+
+.breadcrumb-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.625rem;
+}
+
+.breadcrumb-list li {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.breadcrumb-list li:not(:last-child)::after {
+    content: ">";
+    margin-left: 0.625rem;
+    color: #999;
+}
+
+.breadcrumb-list a {
+    color: rgb(224, 109, 110);
+    text-decoration: none;
+}
+
+.breadcrumb-list a:hover {
+    text-decoration: underline;
+}
+
+
+/* デスクトップ対応 (1024px以上) */
+@media (min-width: 1024px) {
+    .treatment-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .breadcrumb-list {
+        gap: 0.9375rem;
+    }
+    
+    .breadcrumb-list li:not(:last-child)::after {
+        margin-left: 0.9375rem;
+    }
+}
+
+.page-header {
+    padding: 3.75rem 0;
+    background: linear-gradient(135deg, #e06d6f6d 0%, #e9ecef 100%);
+}
+
+.page-header-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.page-header-image img {
+    border-radius: 0.9375rem;
+    box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.1);
+}
+
+/* タブレット対応 (768px以上) */
+@media (min-width: 768px) {
+    .page-header-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 3.75rem;
+    }
+    
+    .page-title {
+        font-size: 2.625rem;
+    }
+    
+    .treatment-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        align-items: center;
+    }
+    
+    .feature-card:nth-child(even) .feature-image {
+        order: 2;
+    }
+    
+    .feature-card:nth-child(even) .feature-content {
+        order: 1;
+    }
+    
+    .pricing-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .cta-buttons {
+        /* flex-direction: row; */
+        max-width: 37.5rem;
+    }
+}
+
+/* 一般歯科詳細メニュー */
+.menu-detail-section {
+    padding: 5rem 0;
+    background: white;
+}
+
+.menu-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+.menu-detail-item {
+    background: white;
+    border-radius: 0.9375rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1.5625rem rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-detail-item:hover {
+    transform: translateY(-0.3125rem);
+}
+
+.menu-detail-image img {
+    width: 100%;
+    height: 15.625rem;
+    object-fit: cover;
+}
+
+.menu-detail-content {
+    padding: 1.875rem;
+}
+
+.menu-detail-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #e06d6e;
+    margin-bottom: 0.9375rem;
+}
+
+.menu-detail-desc {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+}
+
+.menu-detail-list {
+    list-style: none;
+    margin-bottom: 1.5625rem;
+}
+
+.menu-detail-list li {
+    padding: 0.75rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+    color: #666;
+    border-bottom: 0.0625rem solid #f0f0f0;
+    line-height: 1.6;
+}
+
+.menu-detail-btn{
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+    background-color: #e06d6e;
+    padding: 0.2rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    margin-top: 0.4rem;
+}
+
+.menu-detail-list li:last-child {
+    border-bottom: none;
+}
+
+.menu-detail-list li::before {
+    content: "▶";
+    position: absolute;
+    left: 0;
+    color: #e06d6e;
+    font-size: 0.75rem;
+    top: 0.875rem;
+}
+
+.menu-detail-list strong {
+    color: #333;
+    font-weight: 600;
+    /* display: block; */
+    margin-bottom: 0.3125rem;
+}
+
+.menu-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.9375rem 1.25rem;
+    background: #f8f9fa;
+    border-radius: 0.5rem;
+    margin-top: 1.25rem;
+}
+
+.price-label {
+    font-size: 0.875rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.price-value {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #e06d6e;
+}
+
+/* 治療の流れセクション */
+.treatment-flow-section {
+    padding: 5rem 0;
+    background: #f8f9fa;
+}
+
+.section-desc {
+    text-align: center;
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 3.125rem;
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flow-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.875rem;
+    margin-bottom: 3.125rem;
+}
+
+.flow-item {
+    background: white;
+    border-radius: 0.9375rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1.5625rem rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: visible;
+}
+
+.flow-item:hover {
+    transform: translateY(-0.3125rem);
+}
+
+.flow-number {
+    width: 2.75rem;
+    height: 2.75rem;
+    background: linear-gradient(135deg, #e06d6e, #d84545);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: absolute;
+    bottom: -1.5rem;
+    left: 8.875rem;
+    z-index: 1000;
+    box-shadow: 0 0.25rem 0.9375rem rgba(224, 109, 110, 0.3);
+}
+
+.flow-content {
+    padding: 3.125rem 1.875rem 1.875rem;
+    position: relative;
+}
+
+.flow-content h3 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.25rem;
+    margin-left: 3.125rem;
+}
+
+.flow-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    align-items: start;
+}
+
+.flow-image img {
+    width: 100%;
+    height: 12.5rem;
+    object-fit: cover;
+    border-radius: 0.625rem;
+}
+
+.flow-text p {
+    color: #e06d6e;
+    font-weight: 600;
+    margin-bottom: 0.9375rem;
+}
+
+.flow-text ul {
+    list-style: none;
+    margin-bottom: 1.25rem;
+}
+
+.flow-text li {
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+    color: #666;
+    line-height: 1.6;
+}
+
+.flow-text li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #e06d6e;
+    font-weight: 600;
+}
+
+.flow-point {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.9375rem;
+    background: #e6f3ff;
+    border-radius: 0.5rem;
+    border-left: 0.25rem solid #007bff;
+}
+
+
+.point-icon {
+    font-size: 1.125rem;
+}
+
+.flow-point span:last-child {
+    color: #333;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.flow-summary {
+    background: rgba(128, 128, 128, 0.183);
+    padding: 1.5rem 0.5rem 2.5rem;
+    border-radius: 0.9375rem;
+    box-shadow: 0 0.5rem 1.5625rem rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.flow-summary h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.875rem;
+}
+
+.flow-timeline {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    max-width: 37.5rem;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+    background: #f8f9fa;
+    border-radius: 0.625rem;
+    border-left: 0.25rem solid #e06d6e;
+}
+
+.timeline-type {
+    font-weight: 600;
+    color: #333;
+}
+
+.timeline-period {
+    color: #e06d6e;
+    font-weight: 600;
+}
+
+/* タブレット対応 (768px以上) - 新セクション用 */
+@media (min-width: 768px) {
+    .menu-detail-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        align-items: center;
+    }
+    
+    .menu-detail-item:nth-child(even) .menu-detail-image {
+        order: 2;
+    }
+    
+    .menu-detail-item:nth-child(even) .menu-detail-content {
+        order: 1;
+    }
+    
+    .flow-details {
+        grid-template-columns: 18.75rem 1fr;
+        gap: 1.875rem;
+    }
+    
+    .flow-timeline {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .flow-number {
+        width: 3.75rem;
+        height: 3.75rem;
+        top: 23.875rem;
+        left: 7.875rem;
+    }
+
+    
+    .timeline-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.625rem;
+    }
+}

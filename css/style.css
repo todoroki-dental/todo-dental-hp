@@ -30,6 +30,7 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #fff;
+    padding-top: 5.5rem; /* ヘッダーの高さ分の余白 */
 }
 
 img {
@@ -51,11 +52,12 @@ a {
 }
 
 .section-title {
-    font-size: 1.75rem;
+    font-size: 1.65rem;
     font-weight: 700;
     text-align: center;
     margin-bottom: 2.5rem;
     color: #333;
+    /* white-space: nowrap; */
 }
 
 .section-title .accent {
@@ -136,7 +138,7 @@ a {
 .cta-phone,
 .cta-web {
     flex: 1;
-    padding: 1rem;
+    padding: 0.7rem;
     text-align: center;
     font-weight: 600;
     color: white;
@@ -163,17 +165,271 @@ a {
 /* ヘッダー */
 .header {
     background: white;
-    padding: 0.9375rem 0;
+    padding: 1.5rem 0;
     box-shadow: 0 0.125rem 0.625rem rgba(0,0,0,0.1);
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 999;
+    height: 5.5rem;
+    transition: transform 0.3s ease;
+    width: 100%;
 }
 
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+/* デスクトップナビゲーション（モバイルでは非表示） */
+.desktop-nav {
+    display: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 3rem;
+}
+
+.nav-menu a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.nav-menu a:hover {
+    color: #e06d6e;
+}
+
+/* ドロップダウンメニュー */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    cursor: pointer;
+}
+
+.dropdown-arrow {
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+/* クリック制御でのアロー回転 */
+.nav-dropdown.active .dropdown-arrow {
+    transform: rotate(180deg) !important;
+}
+
+/* ホバー制御でのアロー回転（クリックされていない場合のみ） */
+.nav-dropdown:not(.clicked):hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: -1.0625rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 1rem rgba(0,0,0,0.1);
+    padding: 0.5rem 0;
+    min-width: 12rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-0.5rem);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    list-style: none;
+}
+
+/* クリック制御（優先度高） */
+.nav-dropdown.active .nav-dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    list-style: none;
+}
+
+/* ホバー制御（クリック制御がない場合のみ） */
+.nav-dropdown:not(.clicked):hover .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-dropdown-menu li {
+    margin: 0;
+}
+
+.nav-dropdown-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #333;
+    font-weight: 400;
+    border-radius: 0;
+}
+
+.nav-dropdown-menu a:hover {
+    background: #f8f9fa;
+    color: #e06d6e;
+}
+
+/* ハンバーガーメニューボタン（デフォルトで表示） */
+.hamburger-menu {
+    top: -2rem;
+    left: 20rem;
+    display: flex;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    gap: 0.25rem;
+    z-index: 1002;
+    position: relative;
+    border: 1px solid #e06d6e;
+    border-radius: 0.25rem;
+}
+
+.hamburger-line {
+    width: 1.5rem;
+    height: 0.1875rem;
+    background: #e06d6e;
+    transition: all 0.3s ease;
+    border-radius: 0.0625rem;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(0.275rem, 0.275rem);
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(0.375rem, -0.375rem);
+}
+
+/* モバイルナビゲーション */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.mobile-nav.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-nav-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+    max-width: 25rem;
+    height: 40rem;
+    background: white;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+}
+
+.mobile-nav.active .mobile-nav-content {
+    transform: translateX(0);
+}
+
+.mobile-nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 1rem 0 2rem;
+}
+
+.mobile-nav-menu > li {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-nav-menu > li > a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    width: 14rem;
+}
+
+.mobile-nav-menu > li > a:hover {
+    background: #f8f9fa;
+    color: #e06d6e;
+}
+
+.mobile-nav-section h3 {
+    padding: 1rem 1.5rem 0.5rem;
+    color: #e06d6e;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.mobile-nav-submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+}
+
+.mobile-nav-submenu a {
+    display: block;
+    padding: 0.75rem 2rem;
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-nav-submenu a:hover {
+    background: #e9ecef;
+    color: #e06d6e;
+}
+
+.mobile-nav-cta {
+    margin-top: 2rem;
+    padding: 0 1.5rem;
+}
+
+.mobile-tel-button {
+    display: block;
+    background: #e06d6e;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-tel-button:hover {
+    background: #d84545;
 }
 
 .header-left {
@@ -215,6 +471,7 @@ a {
 
 .header-contact {
     text-align: right;
+    position: relative;
 }
 
 .tel-label {
@@ -226,7 +483,10 @@ a {
 .tel-number {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #e06d6e;
+    color: white;
+    background-color: #e06d6e;
+    padding: 0.5rem 1.2rem;
+    border-radius: 3.125rem;
 }
 
 /* ヒーローセクション */
@@ -238,7 +498,7 @@ a {
 .hero-content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    /* gap: 2.5rem; */
     align-items: center;
 }
 
@@ -270,10 +530,16 @@ a {
     color: white;
     font-weight: 600;
     text-align: center;
-    padding: 1.25rem 39.9479px;
+    padding: 1.25rem 25.4479px;
     border-radius: 0.5rem;
     box-shadow: 0 0.125rem 0.5rem rgba(224, 109, 110, 0.3);
     justify-content: center;
+}
+
+.feature-item.today{
+    background-color: white;
+    border: solid 2px #e06d6e;
+    color: #e06d6e;
 }
 
 .feature-icon {
@@ -337,10 +603,17 @@ a {
     grid-template-columns: 1fr;
     gap: 1.5625rem;
 }
+.pain-grid a{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5625rem;
+}
+
+
 
 .pain-item {
     background: white;
-    padding: 1.875rem;
+    padding: 1rem 1.875rem;
     border-radius: 0.9375rem;
     text-align: center;
     box-shadow: 0 0.25rem 0.9375rem rgba(0,0,0,0.1);
@@ -353,7 +626,7 @@ a {
 
 .pain-icon {
     font-size: 3rem;
-    margin-bottom: 0.9375rem;
+    margin-bottom: 0.2rem;
 }
 
 .pain-icon img{
@@ -440,6 +713,32 @@ a {
     font-weight: 600;
 }
 
+/* ctaボタン */
+.cta-tell{
+    padding: 1.5rem 0;
+    display: flex;
+    /* justify-content: center; */
+    background-color: #e06d6e;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-tell p{
+    color: white;
+    font-size: 1rem;
+}
+
+.tel-number-cta{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #e06d6e;
+    background-color: white;
+    padding: 0.3rem 2.5rem;
+    border-radius: 3.125rem;
+    border: 2px solid #e06d6e;
+    margin-top: 1rem;
+}
+
 /* 専門性セクション */
 .expertise-section {
     padding: 3rem 0;
@@ -473,15 +772,23 @@ a {
 @media (min-width: 768px) {
     /* 1番目の医師：写真左、テキスト右 */
     .doctor-profile {
-        grid-template-columns: 12.5rem 1fr;
+        grid-template-columns: 1fr 12.5rem;
         align-items: center;
     }
     
     /* 2番目の医師：写真右、テキスト左 */
-    .expertise-content:nth-child(2) .doctor-profile {
+    .expertise-content.doctor-profile {
         grid-template-columns: 1fr 12.5rem;
     }
+
     
+    /* .expertise-content:nth-child(1) .doctor-profile {
+        grid-template-columns: 1fr 12.5rem;
+    }
+    .expertise-content:nth-child(2) .doctor-profile {
+        grid-template-columns: 1fr 12.5rem;
+    } */
+
     .doctor-info h3 {
         text-align: left;
     }
@@ -508,7 +815,11 @@ a {
     color: #e06d6e;
     font-weight: 600;
     margin-bottom: 0.3125rem;
-    text-align: left;
+    text-align: center;
+}
+
+.otherDr p {
+    font-size: 1rem;
 }
 
 .doctor-details {
@@ -555,11 +866,10 @@ a {
 }
 
 .schedule-treatment {
-    margin-top: 1.875rem;
+    margin-top: 0.5rem;
     padding: 1.5625rem;
     background: #f8f9fa;
     border-radius: 0.625rem;
-    /* display: grid; */
     display: flex;
     flex-direction: column;
     grid-template-columns: 1fr 1fr;
@@ -575,9 +885,10 @@ a {
     text-align: center;
 }
 
+
 .schedule-grid {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     gap: 0.3125rem;
     margin-bottom: 0.9375rem;
 }
@@ -588,6 +899,10 @@ a {
     border-radius: 0.25rem;
     font-size: 0.875rem;
     font-weight: 600;
+}
+
+.day.week{
+    background-color: none;
 }
 
 .day.active {
@@ -1205,6 +1520,69 @@ a {
     left: 0;
 }
 
+/* 支払い方法 */
+
+.payment-section{
+    display: flex;
+    margin: 0 auto;
+}
+
+.payment-info {
+    margin-top: 2.5rem;
+    margin: 1rem auto;
+    padding: 1.875rem;
+    background: white;
+    border-radius: 0.9375rem;
+    box-shadow: 0 0.25rem 0.9375rem rgba(0,0,0,0.1);
+}
+
+.payment-info h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.5625rem;
+    text-align: center;
+}
+
+.payment-methods {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+.payment-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: #f8f9fa;
+    border-radius: 0.625rem;
+    transition: all 0.3s ease;
+}
+
+.payment-item:hover {
+    background: #e9ecef;
+    transform: translateY(-0.125rem);
+}
+
+.payment-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.payment-content h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.25rem;
+}
+
+.payment-content p {
+    color: #666;
+    font-size: 0.875rem;
+}
+
+
 /* フッターCTA */
 .footer-cta {
     padding: 3.75rem 0;
@@ -1285,6 +1663,7 @@ a {
     grid-template-columns: 1fr;
     gap: 1.875rem;
     margin-bottom: 1.875rem;
+    text-align: center;
 }
 
 .footer-info h3 {
@@ -1342,9 +1721,11 @@ a {
     }
     
     .header-content {
-        flex-direction: column;
-        /* gap: 0.9375rem; */
+        display: flex;
+        gap: 1.9375rem;
         text-align: center;
+        justify-content: flex-start;
+        align-items: flex-end;
     }
     
     .header-contact {
@@ -1367,6 +1748,16 @@ a {
         display: block;
     }
     
+    /* デスクトップナビゲーションを表示 */
+    .desktop-nav {
+        display: block;
+    }
+    
+    /* ハンバーガーメニューを非表示 */
+    .hamburger-menu {
+        display: none;
+    }
+    
     .hero-content {
         grid-template-columns: 1fr 1fr;
         gap: 3.75rem;
@@ -1383,7 +1774,7 @@ a {
     }
     
     .feature-item{
-        padding: 1.5rem 0.75rem;
+        padding: 1.5rem 0.62rem;
     }
 
     .hero-cta {
@@ -1404,11 +1795,11 @@ a {
     }
     
     .solution-item:nth-child(even) .solution-image {
-        order: 2;
+        order: 1;
     }
     
     .solution-item:nth-child(even) .solution-content {
-        order: 1;
+        order: 2;
     }
     
     .doctor-profile {
@@ -1429,17 +1820,11 @@ a {
 }
     
     /* 2番目の医師紹介は写真を右側に */
-    .expertise-content:nth-child(2) .doctor-profile {
+    .expertise-content.doctor-profile {
         grid-template-columns: 1fr 12.5rem;
     }
     
-    .expertise-content:nth-child(2) .doctor-image {
-        order: 2;
-    }
-    
-    .expertise-content:nth-child(2) .doctor-info {
-        order: 1;
-    }
+
     
     .doctor-info h3 {
         text-align: left;
@@ -1503,10 +1888,14 @@ a {
     .fixed-cta {
         display: none;
     }
+
+    .payment-methods {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /* デスクトップ対応 (1024px以上) */
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
     .hero-title {
         font-size: 3rem;
     }
@@ -1550,7 +1939,7 @@ a {
         height: 2rem;
         font-size: 0.875rem;
     }
-}
+} */
 
 /* アニメーション */
 @keyframes fadeInUp {
@@ -1609,7 +1998,7 @@ a {
 
 /* CLS対策 */
 .hero-image {
-    min-height: 18.75rem;
+    /* min-height: 18.75rem; */
 }
 
 .solution-image {
@@ -1618,7 +2007,7 @@ a {
 
 .doctor-image {
     width: 12.5rem;
-    height: 12.5rem;
+    /* height: 12.5rem; */
     margin: 0 auto;
 }
 
@@ -1646,51 +2035,8 @@ section {
     color: inherit;
 }
 
-.breadcrumb {
-    background: #f8f9fa;
-    padding: 0.9375rem 0;
-    margin-top: 4.375rem;
-}
 
-.breadcrumb-list {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 0.625rem;
-}
 
-.breadcrumb-list li {
-    font-size: 0.875rem;
-    color: #666;
-}
-
-.breadcrumb-list li:not(:last-child)::after {
-    content: ">";
-    margin-left: 0.625rem;
-    color: #999;
-}
-
-.breadcrumb-list a {
-    color: #e06d6e;
-    text-decoration: none;
-}
-
-.breadcrumb-list a:hover {
-    text-decoration: underline;
-}
-
-.page-header {
-    padding: 3.75rem 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-}
-
-.page-header-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    align-items: center;
-}
 
 .page-title {
     font-size: 2rem;
@@ -1719,11 +2065,6 @@ section {
     border-radius: 1.25rem;
     font-size: 0.875rem;
     font-weight: 600;
-}
-
-.page-header-image img {
-    border-radius: 0.9375rem;
-    box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.1);
 }
 
 .treatment-section {
@@ -1966,12 +2307,7 @@ section {
 }
 
 /* タブレット対応 (768px以上) */
-@media (min-width: 768px) {
-    .page-header-content {
-        grid-template-columns: 1fr 1fr;
-        gap: 3.75rem;
-    }
-    
+/* @media (min-width: 768px) {    
     .page-title {
         font-size: 2.625rem;
     }
@@ -2005,9 +2341,9 @@ section {
     
     .cta-buttons {
         /* flex-direction: row; */
-        max-width: 37.5rem;
+        /* max-width: 37.5rem;
     }
-}
+} */ */
 
 /* ペインリストスタイル */
 .pain-item ul {
@@ -2054,324 +2390,4 @@ section {
     line-height: 1.6;
 }
 
-/* 一般歯科詳細メニュー */
-.menu-detail-section {
-    padding: 5rem 0;
-    background: white;
-}
 
-.menu-detail-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-}
-
-.menu-detail-item {
-    background: white;
-    border-radius: 0.9375rem;
-    overflow: hidden;
-    box-shadow: 0 0.5rem 1.5625rem rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.menu-detail-item:hover {
-    transform: translateY(-0.3125rem);
-}
-
-.menu-detail-image img {
-    width: 100%;
-    height: 15.625rem;
-    object-fit: cover;
-}
-
-.menu-detail-content {
-    padding: 1.875rem;
-}
-
-.menu-detail-content h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #e06d6e;
-    margin-bottom: 0.9375rem;
-}
-
-.menu-detail-desc {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 1.25rem;
-    font-size: 1rem;
-}
-
-.menu-detail-list {
-    list-style: none;
-    margin-bottom: 1.5625rem;
-}
-
-.menu-detail-list li {
-    padding: 0.75rem 0;
-    padding-left: 1.25rem;
-    position: relative;
-    color: #666;
-    border-bottom: 0.0625rem solid #f0f0f0;
-    line-height: 1.6;
-}
-
-.menu-detail-list li:last-child {
-    border-bottom: none;
-}
-
-.menu-detail-list li::before {
-    content: "▶";
-    position: absolute;
-    left: 0;
-    color: #e06d6e;
-    font-size: 0.75rem;
-    top: 0.875rem;
-}
-
-.menu-detail-list strong {
-    color: #333;
-    font-weight: 600;
-    display: block;
-    margin-bottom: 0.3125rem;
-}
-
-.menu-price {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.9375rem 1.25rem;
-    background: #f8f9fa;
-    border-radius: 0.5rem;
-    margin-top: 1.25rem;
-}
-
-.price-label {
-    font-size: 0.875rem;
-    color: #666;
-    font-weight: 500;
-}
-
-.price-value {
-    font-size: 1.125rem;
-    font-weight: 700;
-    color: #e06d6e;
-}
-
-/* 治療の流れセクション */
-.treatment-flow-section {
-    padding: 5rem 0;
-    background: #f8f9fa;
-}
-
-.section-desc {
-    text-align: center;
-    color: #666;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 3.125rem;
-    max-width: 50rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.flow-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.875rem;
-    margin-bottom: 3.125rem;
-}
-
-.flow-item {
-    background: white;
-    border-radius: 0.9375rem;
-    overflow: hidden;
-    box-shadow: 0 0.5rem 1.5625rem rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.flow-item:hover {
-    transform: translateY(-0.3125rem);
-}
-
-.flow-number {
-    width: 3.75rem;
-    height: 3.75rem;
-    background: linear-gradient(135deg, #e06d6e, #d84545);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-    position: absolute;
-    top: -1.875rem;
-    left: 1.875rem;
-    box-shadow: 0 0.25rem 0.9375rem rgba(224, 109, 110, 0.3);
-}
-
-.flow-content {
-    padding: 3.125rem 1.875rem 1.875rem;
-    position: relative;
-}
-
-.flow-content h3 {
-    font-size: 1.375rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 1.25rem;
-    margin-left: 3.125rem;
-}
-
-.flow-details {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-    align-items: start;
-}
-
-.flow-image img {
-    width: 100%;
-    height: 12.5rem;
-    object-fit: cover;
-    border-radius: 0.625rem;
-}
-
-.flow-text p {
-    color: #e06d6e;
-    font-weight: 600;
-    margin-bottom: 0.9375rem;
-}
-
-.flow-text ul {
-    list-style: none;
-    margin-bottom: 1.25rem;
-}
-
-.flow-text li {
-    padding: 0.5rem 0;
-    padding-left: 1.25rem;
-    position: relative;
-    color: #666;
-    line-height: 1.6;
-}
-
-.flow-text li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #e06d6e;
-    font-weight: 600;
-}
-
-.flow-point {
-    display: flex;
-    align-items: center;
-    gap: 0.625rem;
-    padding: 0.9375rem;
-    background: #e6f3ff;
-    border-radius: 0.5rem;
-    border-left: 0.25rem solid #007bff;
-}
-
-.point-icon {
-    font-size: 1.125rem;
-}
-
-.flow-point span:last-child {
-    color: #333;
-    font-size: 0.875rem;
-    font-weight: 500;
-}
-
-.flow-summary {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 0.9375rem;
-    box-shadow: 0 0.5rem 1.5625rem rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.flow-summary h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 1.875rem;
-}
-
-.flow-timeline {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-    max-width: 37.5rem;
-    margin: 0 auto;
-}
-
-.timeline-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.25rem;
-    background: #f8f9fa;
-    border-radius: 0.625rem;
-    border-left: 0.25rem solid #e06d6e;
-}
-
-.timeline-type {
-    font-weight: 600;
-    color: #333;
-}
-
-.timeline-period {
-    color: #e06d6e;
-    font-weight: 600;
-}
-
-/* タブレット対応 (768px以上) - 新セクション用 */
-@media (min-width: 768px) {
-    .menu-detail-item {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0;
-        align-items: center;
-    }
-    
-    .menu-detail-item:nth-child(even) .menu-detail-image {
-        order: 2;
-    }
-    
-    .menu-detail-item:nth-child(even) .menu-detail-content {
-        order: 1;
-    }
-    
-    .flow-details {
-        grid-template-columns: 18.75rem 1fr;
-        gap: 1.875rem;
-    }
-    
-    .flow-timeline {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-    .timeline-item {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.625rem;
-    }
-}
-
-/* デスクトップ対応 (64rem以上) */
-@media (min-width: 64rem) {
-    .treatment-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .breadcrumb-list {
-        gap: 0.9375rem;
-    }
-    
-    .breadcrumb-list li:not(:last-child)::after {
-        margin-left: 0.9375rem;
-    }
-}

@@ -4,48 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>一般歯科・虫歯治療｜轟歯科 - 須坂市で土日も診療</title>
-    <meta name="description" content="須坂市の轟歯科の一般歯科・虫歯治療。虫歯治療、根管治療、歯周病治療、定期検診まで、お口の健康をトータルサポート。土日祝も診療中。">
+    <meta name="description" content="須坂市の轟歯科の一般歯科・虫歯治療。虫歯治療、根管治療、歯周病治療、定期検診まで、お口の健康をトータルサポート。土日も診療中。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/general.css">
 </head>
 <body>
     <!-- 固定予約ボタン -->
     <div class="fixed-cta">
-        <a href="tel:026-245-0126" class="cta-phone">
+        <a href="026-248-1391" class="cta-phone">
             <span class="cta-icon">📞</span>
             電話で予約
         </a>
-        <a href="index.html#reservation" class="cta-web">
+        <!-- <a href="index.html#reservation" class="cta-web">
             <span class="cta-icon">📝</span>
             Web予約
-        </a>
+        </a> -->
     </div>
 
-    <!-- ヘッダー -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="header-left">
-                    <h1 class="logo">
-                        <a href="index.html">轟歯科</a>
-                    </h1>
-                    <div class="header-keywords">
-                        <span class="keyword-tag">須坂市</span>
-                        <span class="keyword-tag">土日診療</span>
-                        <span class="keyword-tag">口腔外科専門医</span>
-                    </div>
-                </div>
-                <div class="header-contact">
-                    <div class="tel">
-                        <span class="tel-label">お電話での予約</span>
-                        <a href="tel:026-245-0126" class="tel-number">026-245-0126</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <!-- ヘッダー（共通化） -->
+    <div id="header-placeholder"></div>
 
     <main>
         <!-- パンくずナビ -->
@@ -67,7 +47,7 @@
                         <h1 class="page-title">一般歯科・虫歯治療</h1>
                         <p class="page-subtitle">虫歯治療から定期検診まで、お口の健康をトータルサポート</p>
                         <div class="page-features">
-                            <div class="feature-tag">土日祝診療</div>
+                            <div class="feature-tag">土日診療</div>
                             <div class="feature-tag">当日予約OK</div>
                             <div class="feature-tag">痛みを抑えた治療</div>
                         </div>
@@ -80,7 +60,7 @@
         </section>
 
         <!-- ペイン共感セクション -->
-        <section class="pain-section">
+        <!-- <section class="pain-section">
             <div class="container">
                 <h2 class="section-title">こんなお悩みありませんか？</h2>
                 <div class="pain-grid">
@@ -127,10 +107,10 @@
                 </div>
                 <div class="pain-solution">
                     <h3>轟歯科なら全て解決できます</h3>
-                    <p>土日祝診療・口腔外科専門医在籍・最新設備完備で、あらゆるお悩みにお応えします</p>
+                    <p>土日診療・口腔外科専門医在籍・最新設備完備で、あらゆるお悩みにお応えします</p>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- 一般歯科詳細メニュー -->
         <section class="menu-detail-section">
@@ -139,15 +119,15 @@
                 <div class="menu-detail-grid">
                     <div class="menu-detail-item">
                         <div class="menu-detail-image">
-                            <img src="https://images.unsplash.com/photo-1609840113631-72558e51a0b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="虫歯治療">
+                            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="虫歯治療">
                         </div>
                         <div class="menu-detail-content">
                             <h3>虫歯治療</h3>
                             <p class="menu-detail-desc">初期虫歯から重度の虫歯まで、進行度に応じた最適な治療を提供</p>
                             <ul class="menu-detail-list">
-                                <li><strong>C0・C1（初期虫歯）</strong><br>フッ素塗布・経過観察・生活指導</li>
-                                <li><strong>C2（中程度虫歯）</strong><br>コンポジットレジン充填・インレー</li>
-                                <li><strong>C3（重度虫歯）</strong><br>根管治療・クラウン修復</li>
+                                <li><strong>C0・C1（初期虫歯）</strong><br>フッ素塗布・経過観察・生活指導<br><a href="https://www.todoroki-h.com/caries-treatment"><button class="menu-detail-btn">治療内容を詳しく見る</button></a></li>
+                                <li><strong>C2（中程度虫歯）</strong><br>コンポジットレジン充填・インレー<br><a href="https://www.todoroki-h.com/caries-treatment"><button class="menu-detail-btn">治療内容を詳しく見る</button></a></li>
+                                <li><strong>C3（重度虫歯）</strong><br>根管治療・クラウン修復<br><a href="https://www.todoroki-h.com/caries-treatment"><button class="menu-detail-btn">治療内容を詳しく見る</button></a></li>
                                 <li><strong>C4（残根状態）</strong><br>抜歯・インプラント・義歯検討</li>
                             </ul>
                             <div class="menu-price">
@@ -157,13 +137,32 @@
                         </div>
                     </div>
 
+
+                <div class="flow-summary">
+                    <h3>治療期間の目安</h3>
+                    <div class="flow-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-type">軽度の虫歯</div>
+                            <div class="timeline-period">1〜2回（1〜2週間）</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-type">中程度の虫歯</div>
+                            <div class="timeline-period">2〜4回（2〜4週間）</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-type">根管治療が必要</div>
+                            <div class="timeline-period">3〜6回（1〜2ヶ月）</div>
+                        </div>
+                    </div>
+                </div>
+
                     <div class="menu-detail-item">
                         <div class="menu-detail-image">
-                            <img src="https://images.unsplash.com/photo-1559757148-5c350d20d6f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="根管治療">
+                            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="根管治療">
                         </div>
                         <div class="menu-detail-content">
                             <h3>根管治療（歯の神経治療）</h3>
-                            <p class="menu-detail-desc">感染した歯の神経を除去し、歯を残すための精密治療</p>
+                            <p class="menu-detail-desc">感染した歯の神経を除去し、歯根を残すための精密治療</p>
                             <ul class="menu-detail-list">
                                 <li><strong>ニッケルチタンファイル</strong><br>柔軟性の高い器具で安全に</li>
                                 <li><strong>丁寧な根管充填</strong><br>再感染を防ぐ確実な封鎖</li>
@@ -175,7 +174,7 @@
                         </div>
                     </div>
 
-                    <div class="menu-detail-item">
+                    <div class="menu-detail-item" style="background-color: rgba(224, 109, 111, 0.185);">
                         <div class="menu-detail-image">
                             <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="歯周病治療">
                         </div>
@@ -195,7 +194,7 @@
                         </div>
                     </div>
 
-                    <div class="menu-detail-item">
+                    <div class="menu-detail-item" style="background-color: rgba(100, 190, 228, 0.185);">
                         <div class="menu-detail-image">
                             <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="予防歯科">
                         </div>
@@ -266,7 +265,7 @@
                 
                 <div class="flow-container">
                     <div class="flow-item">
-                        <div class="flow-number">1</div>
+                        <div class="flow-number">↓</div>
                         <div class="flow-content">
                             <h3>初診・カウンセリング</h3>
                             <div class="flow-details">
@@ -282,7 +281,7 @@
                                         <li>治療に対するご希望・不安の確認</li>
                                     </ul>
                                     <div class="flow-point">
-                                        <span class="point-icon">💡</span>
+                                        <span class="point-icon"></span>
                                         <span>痛みが強い場合は当日に応急処置を行います</span>
                                     </div>
                                 </div>
@@ -291,7 +290,7 @@
                     </div>
 
                     <div class="flow-item">
-                        <div class="flow-number">2</div>
+                        <div class="flow-number">↓</div>
                         <div class="flow-content">
                             <h3>精密検査・診断</h3>
                             <div class="flow-details">
@@ -316,12 +315,12 @@
                     </div>
 
                     <div class="flow-item">
-                        <div class="flow-number">3</div>
+                        <div class="flow-number">↓</div>
                         <div class="flow-content">
                             <h3>治療計画の説明・同意</h3>
                             <div class="flow-details">
                                 <div class="flow-image">
-                                    <img src="https://images.unsplash.com/photo-1584432810601-6c7f27d577ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="治療説明">
+                                    <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="治療説明">
                                 </div>
                                 <div class="flow-text">
                                     <p><strong>所要時間：15〜20分</strong></p>
@@ -332,8 +331,8 @@
                                         <li>患者様のご希望に合わせた治療計画</li>
                                     </ul>
                                     <div class="flow-point">
-                                        <span class="point-icon">📋</span>
-                                        <span>分かりやすい資料でご説明します</span>
+                                        <span class="point-icon"></span>
+                                        <span>なんでも質問してください！</span>
                                     </div>
                                 </div>
                             </div>
@@ -341,12 +340,12 @@
                     </div>
 
                     <div class="flow-item">
-                        <div class="flow-number">4</div>
+                        <div class="flow-number">↓</div>
                         <div class="flow-content">
                             <h3>虫歯治療の実施</h3>
                             <div class="flow-details">
                                 <div class="flow-image">
-                                    <img src="https://images.unsplash.com/photo-1609840113631-72558e51a0b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="虫歯治療">
+                                    <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="虫歯治療">
                                 </div>
                                 <div class="flow-text">
                                     <p><strong>所要時間：30〜60分（程度により変動）</strong></p>
@@ -357,7 +356,7 @@
                                         <li>噛み合わせの調整・研磨</li>
                                     </ul>
                                     <div class="flow-point">
-                                        <span class="point-icon">😊</span>
+                                        <span class="point-icon"></span>
                                         <span>痛みを最小限に抑えた優しい治療</span>
                                     </div>
                                 </div>
@@ -366,7 +365,7 @@
                     </div>
 
                     <div class="flow-item">
-                        <div class="flow-number">5</div>
+                        <div class="flow-number">↓</div>
                         <div class="flow-content">
                             <h3>治療後の確認・指導</h3>
                             <div class="flow-details">
@@ -383,7 +382,7 @@
                                     </ul>
                                     <div class="flow-point">
                                         <span class="point-icon">📞</span>
-                                        <span>術後の不安があればいつでもお電話ください</span>
+                                        <span>術後の不安があればいつでもご連絡</span>
                                     </div>
                                 </div>
                             </div>
@@ -391,12 +390,12 @@
                     </div>
 
                     <div class="flow-item">
-                        <div class="flow-number">6</div>
+                        <!-- <div class="flow-number">next</div> -->
                         <div class="flow-content">
                             <h3>定期メンテナンス</h3>
                             <div class="flow-details">
                                 <div class="flow-image">
-                                    <img src="https://images.unsplash.com/photo-1606811955229-1b92334f2964?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="定期メンテナンス">
+                                    <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="定期メンテナンス">
                                 </div>
                                 <div class="flow-text">
                                     <p><strong>所要時間：30分　頻度：3〜6ヶ月に1回</strong></p>
@@ -407,7 +406,7 @@
                                         <li>フッ素塗布による予防強化</li>
                                     </ul>
                                     <div class="flow-point">
-                                        <span class="point-icon">🛡️</span>
+                                        <span class="point-icon"></span>
                                         <span>再発防止で長期的な口腔健康を維持</span>
                                     </div>
                                 </div>
@@ -443,7 +442,7 @@
                     <h2>一般歯科治療のご相談・ご予約</h2>
                     <p>虫歯や歯の痛みでお困りの方、定期検診をご希望の方は<br>お気軽にお電話またはWebフォームからご相談ください</p>
                     <div class="cta-buttons">
-                        <a href="tel:026-245-0126" class="btn btn-primary btn-large">
+                        <a href="tel:026-248-1391" class="btn btn-primary btn-large">
                             <span class="btn-icon">📞</span>
                             今すぐ電話で相談
                         </a>
@@ -453,8 +452,8 @@
                         </a> -->
                     </div>
                     <div class="cta-info">
-                        <p>📞 026-245-0126</p>
-                        <p>🕐 土日祝も診療中（平日9:00-18:00 / 土日祝9:00-17:00）</p>
+                        <p>📞 026-248-1391</p>
+                        <p>🕐 土日も診療中（平日土9:30-18:30 / 日9:30-18:00）</p>
                     </div>
                 </div>
             </div>
@@ -467,8 +466,8 @@
             <div class="footer-content">
                 <div class="footer-info">
                     <h3><a href="index.html">轟歯科</a></h3>
-                    <p>〒382-0000 長野県須坂市大字須坂1239</p>
-                    <p>TEL: 026-245-0126</p>
+                    <p>〒382-0911 長野県須坂市大字須坂1239</p>
+                    <p>TEL: 026-248-1391</p>
                 </div>
                 <div class="footer-menu">
                     <h4>診療メニュー</h4>
@@ -481,8 +480,8 @@
                 </div>
                 <div class="footer-hours">
                     <h4>診療時間</h4>
-                    <p>平日 9:00-18:00</p>
-                    <p>土日祝 9:00-17:00</p>
+                    <p>平日 9:30-18:30</p>
+                    <p>土日 9:30-18:00</p>
                 </div>
             </div>
             <div class="footer-bottom">

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(open:*)",
+      "WebFetch(domain:www.todoroki-h.com)",
+      "mcp__ide__getDiagnostics",
+      "Bash(python3:*)"
+    ],
+    "deny": []
+  }
+}

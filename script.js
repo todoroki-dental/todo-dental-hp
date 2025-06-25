@@ -1,6 +1,128 @@
 // DOM読み込み完了後に実行
 document.addEventListener('DOMContentLoaded', function() {
     
+    // 共通ヘッダーの読み込み
+    const headerPlaceholder = document.getElementById('header-placeholder');
+    if (headerPlaceholder) {
+        fetch('./header.html')
+            .then(response => {
+                console.log('Header fetch response:', response.status, response.statusText);
+                if (!response.ok) {
+                    throw new Error(`Header file not found: ${response.status} ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                headerPlaceholder.innerHTML = data;
+                
+                // ヘッダー読み込み後に少し待ってから初期化
+                setTimeout(() => {
+                    initializeHeaderFunctionality();
+                    initializeScrollHeader();
+                }, 100);
+            })
+            .catch(error => {
+                console.error('Error loading header:', error);
+                // フォールバック: 基本的なヘッダーを表示
+                headerPlaceholder.innerHTML = `
+<header class="header">
+
+</header>
+                `;
+             // フォールバック後でも初期化を実行
+                setTimeout(() => {
+                initializeHeaderFunctionality();
+                initializeScrollHeader();
+                }, 100);
+            });
+    }
+    
+    // ヘッダー機能の初期化（ヘッダー読み込み後に実行）
+    function initializeHeaderFunctionality() {
+        // ハンバーガーメニューの機能
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const mobileNav = document.querySelector('.mobile-nav');
+        
+        console.log('Hamburger menu element:', hamburgerMenu);
+        console.log('Mobile nav element:', mobileNav);
+        
+        if (hamburgerMenu && mobileNav) {
+            console.log('Setting up hamburger menu functionality');
+            hamburgerMenu.addEventListener('click', function() {
+                console.log('Hamburger menu clicked');
+                // ハンバーガーメニューボタンとモバイルナビの切り替え
+                hamburgerMenu.classList.toggle('active');
+                mobileNav.classList.toggle('active');
+                
+                // ボディのスクロールを制御
+                if (mobileNav.classList.contains('active')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            });
+            
+            // モバイルナビ背景クリックで閉じる
+            mobileNav.addEventListener('click', function(e) {
+                if (e.target === mobileNav) {
+                    hamburgerMenu.classList.remove('active');
+                    mobileNav.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+            
+            // モバイルナビ内のリンククリックで閉じる
+            const mobileNavLinks = mobileNav.querySelectorAll('a');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    hamburgerMenu.classList.remove('active');
+                    mobileNav.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+        } else {
+            console.error('Hamburger menu or mobile nav not found:', {
+                hamburgerMenu: !!hamburgerMenu,
+                mobileNav: !!mobileNav
+            });
+        }
+        
+        // デスクトップドロップダウンメニューの制御
+        const dropdownToggles = document.querySelectorAll('.nav-dropdown-toggle');
+        console.log('Dropdown toggles found:', dropdownToggles.length);
+        
+        dropdownToggles.forEach(toggle => {
+            const dropdown = toggle.closest('.nav-dropdown');
+            
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log('Dropdown toggle clicked');
+                
+                // 他のドロップダウンを閉じる
+                dropdownToggles.forEach(otherToggle => {
+                    const otherDropdown = otherToggle.closest('.nav-dropdown');
+                    if (otherDropdown !== dropdown) {
+                        otherDropdown.classList.remove('active', 'clicked');
+                    }
+                });
+                
+                // 現在のドロップダウンを切り替え
+                dropdown.classList.toggle('active');
+                dropdown.classList.add('clicked'); // クリックされたことを示すクラス
+            });
+        });
+        
+        // ドロップダウン外をクリックしたら閉じる
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.nav-dropdown')) {
+                dropdownToggles.forEach(toggle => {
+                    const dropdown = toggle.closest('.nav-dropdown');
+                    dropdown.classList.remove('active', 'clicked');
+                });
+            }
+        });
+    }
+    
     // FAQアコーディオン機能
     const faqItems = document.querySelectorAll('.faq-item');
     
@@ -95,23 +217,36 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // スクロールに応じたヘッダーの表示制御
-    let lastScrollTop = 0;
-    const header = document.querySelector('.header');
-    
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // スクロールに応じたヘッダーの表示制御を初期化（ヘッダー読み込み後に実行）
+    function initializeScrollHeader() {
+        let lastScrollTop = 0;
+        const header = document.querySelector('.header');
         
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
-            // 下にスクロール時はヘッダーを隠す
-            header.style.transform = 'translateY(-100%)';
+        console.log('initializeScrollHeader called, header found:', !!header);
+        
+        if (header) {
+            console.log('Adding scroll event listener for header');
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                console.log('Scroll event:', scrollTop, 'lastScrollTop:', lastScrollTop);
+                
+                if (scrollTop > lastScrollTop && scrollTop > 50) {
+                    // 下にスクロール時はヘッダーを隠す
+                    console.log('Hiding header');
+                    header.style.transform = 'translateY(-100%)';
+                } else {
+                    // 上にスクロール時はヘッダーを表示
+                    console.log('Showing header');
+                    header.style.transform = 'translateY(0)';
+                }
+                
+                lastScrollTop = scrollTop;
+            });
         } else {
-            // 上にスクロール時はヘッダーを表示
-            header.style.transform = 'translateY(0)';
+            console.error('Header element not found for scroll control');
         }
-        
-        lastScrollTop = scrollTop;
-    });
+    }
     
     // 固定CTAボタンの表示制御（モバイルのみ）
     const fixedCta = document.querySelector('.fixed-cta');
@@ -135,7 +270,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('img[data-src]');
     
     if (images.length > 0) {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
+        const imageObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const img = entry.target;
@@ -171,6 +306,55 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // ホワイトニングページのタブ切り替え機能
+    const flowTabs = document.querySelectorAll('.flow-tab');
+    const flowContents = document.querySelectorAll('.flow-content');
+    
+    flowTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-target');
+            
+            // 全てのタブから active クラスを削除
+            flowTabs.forEach(t => t.classList.remove('active'));
+            // 全てのコンテンツから active クラスを削除
+            flowContents.forEach(content => content.classList.remove('active'));
+            
+            // クリックされたタブに active クラスを追加
+            this.classList.add('active');
+            
+            // 対応するコンテンツに active クラスを追加
+            const targetContent = document.getElementById(targetId);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
+    
+    // 歯列矯正ページの年齢別タブ切り替え機能
+    const ageTabs = document.querySelectorAll('.age-tab');
+    const ageContents = document.querySelectorAll('.age-content');
+    
+    ageTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-target');
+            
+            // 全てのタブから active クラスを削除
+            ageTabs.forEach(t => t.classList.remove('active'));
+            // 全てのコンテンツから active クラスを削除
+            ageContents.forEach(content => content.classList.remove('active'));
+            
+            // クリックされたタブに active クラスを追加
+            this.classList.add('active');
+            
+            // 対応するコンテンツに active クラスを追加
+            const targetContent = document.getElementById(targetId);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
+    
+    
     // 現在時刻に基づく診療状況表示
     function updateClinicStatus() {
         const now = new Date();
@@ -179,7 +363,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const minute = now.getMinutes();
         const currentTime = hour * 60 + minute;
         
-        const morningStart = 9 * 60; // 9:00
+        const morningStart = 9 * 60; // 9:30
         const morningEnd = 12 * 60 + 30; // 12:30
         const afternoonStart = 14 * 60; // 14:00
         const weekdayEnd = 18 * 60; // 18:00（平日）

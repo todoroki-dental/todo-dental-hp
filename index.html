@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>須坂市で土日も診療｜轟歯科 - 口腔外科専門医による安心治療</title>
-    <meta name="description" content="須坂市で土日祝も診療する歯医者。口腔外科専門医在籍で親知らず抜歯・インプラント・虫歯治療まで対応。当日予約OK、駐車場20台完備。">
+    <meta name="description" content="須坂市で土日も診療する歯医者。口腔外科専門医在籍で親知らず抜歯・インプラント・虫歯治療まで対応。当日予約OK、駐車場20台完備。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
     <link rel="stylesheet" href="./css/style.css">
     
     <!-- Schema.org構造化データ -->
@@ -17,7 +18,7 @@
         "@type": "Dentist",
         "name": "轟歯科",
         "image": "https://via.placeholder.com/600x400/f8f9fa/6c757d?text=轟外観",
-        "description": "須坂市で土日祝も診療する歯科医院。口腔外科専門医在籍。",
+        "description": "須坂市で土日も診療する歯科医院。口腔外科専門医在籍。",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "須坂市大字須坂1239",
@@ -26,11 +27,11 @@
             "postalCode": "382-0000",
             "addressCountry": "JP"
         },
-        "telephone": "026-245-0126",
+        "telephone": "026-248-1391",
         "url": "https://suzaka-dental.jp",
         "openingHours": [
-            "Mo-Fr 09:00-18:00",
-            "Sa-Su 09:00-17:00"
+            "Mo-Fr 09:30-18:00",
+            "Sa-Su 09:30-18:00"
         ],
         "aggregateRating": {
             "@type": "AggregateRating",
@@ -43,37 +44,18 @@
 <body>
     <!-- 固定予約ボタン -->
     <div class="fixed-cta">
-        <a href="tel:026-245-0126" class="cta-phone">
+        <a href="tel:026-248-1391" class="cta-phone">
             <span class="cta-icon">📞</span>
             電話で予約
         </a>
-        <a href="#reservation" class="cta-web">
+        <!-- <a href="#reservation" class="cta-web">
             <span class="cta-icon">📝</span>
             Web予約
-        </a>
+        </a> -->
     </div>
 
-    <!-- ヘッダー -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="header-left">
-                    <h1 class="logo">轟歯科</h1>
-                    <div class="header-keywords">
-                        <span class="">須坂市で土日診療をしている歯科医院です。</span>
-                        <!-- <span class="keyword-tag">土日診療</span>
-                        <span class="keyword-tag">口腔外科専門医</span> -->
-                    </div>
-                </div>
-                <div class="header-contact">
-                    <div class="tel">
-                        <span class="tel-label" style="font-weight: 600;">正確にお話を伺うためにお電話で予約を受け付けております</span>
-                        <a href="tel:026-245-0126" class="tel-number">026-245-0126</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <!-- ヘッダー（共通化） -->
+    <div id="header-placeholder"></div>
 
     <main>
         <!-- Hero Section -->
@@ -82,30 +64,30 @@
                 <div class="hero-content">
                     <div class="hero-text">
                         <h2 class="hero-title">
-                            須坂市で<span class="accent">土日も18:30</span>まで診療<br>
-                            やしい<span class="accent">専門医・認定医が</span><br>
+                            須坂市で<span class="accent">土日も18:00</span>まで診療<br>
+                            やさしい<span class="accent">専門医・認定医が</span><br>
                             <span class="accent">悩みを</span>解決します
                         </h2>
                         <div class="hero-features">
                             <div class="feature-item">
                                 <span class="feature-icon"></span>
-                                <span>土日診療<br>18:30まで</span>
+                                <span>土日診療<br>18:00まで</span>
                             </div>
                             <div class="feature-item">
                                 <span class="feature-icon"></span>
-                                <span>他院で難しい<br>と言われた</span>
+                                <span>他院で難しい<br>と言われた抜歯</span>
                             </div>
                             <div class="feature-item">
                                 <span class="feature-icon"></span>
                                 <span>子どもの<br>歯のトラブル</span>
                             </div>
-                            <div class="feature-item">
+                            <div class="feature-item today">
                                 <span class="feature-icon"></span>
                                 <span>当日予約OK</span>
                             </div>
                         </div>
                         <div class="hero-cta">
-                            <a href="tel:026-245-0126" class="btn btn-primary">
+                            <a href="tel:026-248-1391" class="btn btn-primary">
                                 今すぐ電話で問い合わせ
                             </a>
                             <!-- <a href="#reservation" class="btn btn-secondary">
@@ -129,34 +111,43 @@
             <div class="container">
                 <h2 class="section-title">こんなお悩みありませんか？</h2>
                 <div class="pain-grid">
-                    <div class="pain-item">
-                        <div class="pain-icon">
-                            <img src="img/pain_icon_mushiba.png"> 
+                    <a href="#Solution_sunday">
+                        <div class="pain-item">
+                            <div class="pain-icon">
+                                <img src="img/pain_icon_mushiba.png"> 
+                            </div>
+                            <h3>週末の夕方、歯医者が見つからない</h3>
+                            <p>・平日は仕事で歯医者に行けない<br>・土日も夕方まで診療してくれる歯医者を探している</p>
                         </div>
-                        <h3>突然の歯痛で困っている</h3>
-                        <p>平日は仕事で歯医者に行けない<br>土日も診療してくれる歯医者を探している</p>
-                    </div>
-                    <div class="pain-item">
-                        <div class="pain-icon">
-                            <img src="img/pain_icon_child.png">
+                    </a>
+                    <a href="#Solution_child">
+                        <div class="pain-item">
+                            <div class="pain-icon">
+                                <img src="img/pain_icon_child.png">
+                            </div>
+                            <h3>子どもを診てくれる歯科を探している</h3>
+                            <p>・小さな子どもの治療の経験が豊富な歯医者を探している<br></p>
                         </div>
-                        <h3>子どもと一緒に通いたい</h3>
-                        <p>・小さな子どもの治療の経験が豊富な歯医者を探している<br></p>
-                    </div>
-                    <div class="pain-item">
-                        <div class="pain-icon">
-                            <img src="img/pain_icon_oyashirazu.png">
+                    </a>
+                    <a href="#Solution_doctor">
+                        <div class="pain-item">
+                            <div class="pain-icon">
+                                <img src="img/pain_icon_oyashirazu.png">
+                            </div>
+                            <h3>「ウチでは難しい」と言われ困っている</h3>
+                            <p>・他院で「難しい」と言われたが、大きな病院で待つのは辛い。早めに治療してもらいたい<br>・口腔外科専門医に相談したい</p>
                         </div>
-                        <h3>・難しい症例で困っている</h3>
-                        <p>・他院で「難しい」と言われたが、大きな病院で待つのは辛い。早めに治療してもらいたい<br>口腔外科専門医に相談したい</p>
+                    </a>
+                    <a href="#Solution_hospital">
+                        <div class="pain-item">
+                            <div class="pain-icon">
+                                <img src="img/pain_icon_fuann.png">
+                            </div>
+                            <h3>歯医者が不安でしょうがない</h3>
+                            <p>・ガス麻酔（笑気ガス）を使った治療してくれるところを探している<br>・病院レベルの設備で安心して治療したい</p>
                     </div>
-                    <div class="pain-item">
-                        <div class="pain-icon">
-                            <img src="img/pain_icon_fuann.png">
-                        </div>
-                        <h3>歯科治療が不安でしょうがない</h3>
-                        <p>・ガス麻酔（笑気ガス）を使った治療してくれるところある？<br>・病院レベルの設備で安心して治療したい</p>
-                    </div>
+                    </a>
+                    
                 </div>
             </div>
         </section>
@@ -166,21 +157,35 @@
             <div class="container">
                 <h2 class="section-title">轟歯科が<span class="accent">選ばれる理由</span></h2>
                 <div class="solution-grid">
-                    <div class="solution-item">
+                    <div class="solution-item" id="Solution_sunday">
                         <div class="solution-image">
-                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="土日診療の様子">
+                            <img src="https://thumb.photo-ac.com/91/913befb6a37da7a07795d3f3c9d42b45_t.jpeg" alt="土日診療の様子">
                         </div>
                         <div class="solution-content">
-                            <h3>土日祝診療・当日予約OK</h3>
+                            <h3>土日診療・当日予約OK</h3>
                             <p>平日お忙しい方も安心。土日も通常診療を行っており、急な痛みにも対応可能です。当日予約も承っています。</p>
                             <ul>
-                                <li>土日も18:30まで診療</li>
+                                <li>土日も18:00まで診療</li>
                                 <li>当日予約・急患対応</li>
                                 <li>平日夜18:30まで診療</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="solution-item">
+                    <div class="solution-item" id="Solution_child">
+                        <div class="solution-image">
+                            <img src="https://thumb.photo-ac.com/5a/5ac63a5f7b26a139a4d4ba5e589dfdf5_t.jpeg" alt="口腔外科専門医">
+                        </div>
+                        <div class="solution-content">
+                            <h3>子供の受診しやすい環境を提供しています</h3>
+                            <p>小児の経験が豊富であり、子供が治療を受けやすいようにDVDを各ベッドに設置しています</p>
+                            <ul>
+                                <li>保護者が治療中も横にいれる</li>
+                                <li>年間延1500件以上の実績</li>
+                                <li>子育て経験があるやさしいスタッフ</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="solution-item" id="Solution_doctor">
                         <div class="solution-image">
                             <img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="口腔外科専門医">
                         </div>
@@ -194,12 +199,12 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="solution-item">
+                    <div class="solution-item" id="Solution_hospital">
                         <div class="solution-image">
-                            <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="最新設備">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5w41SqGrcFlCoyMoFeg3SA9FqYPzYk9GKwzY2Igi1HZ2T3i3e1L4UWBI&s=10" alt="最新設備">
                         </div>
                         <div class="solution-content">
-                            <h3>病院レベルの最新設備</h3>
+                            <h3>病院ならではの最新設備</h3>
                             <p>歯科用CT、医科用CT、笑気ガス鎮静、クラスB滅菌器など、安全で精密な治療のための設備を完備。総合病院との連携体制も整っています。</p>
                             <ul>
                                 <li>歯科用CT完備</li>
@@ -212,17 +217,23 @@
             </div>
         </section>
 
+        <section class="cta-tell">
+            <p>ご予約・お問い合わせはお電話から</p>
+            <a href="tel:026-248-1391" class="tel-number-cta">026-248-1391</a>
+        </section>
+
         <!-- 実績・専門性セクション -->
         <section class="expertise-section">
             <div class="container">
                 <h2 class="section-title">医師紹介・実績</h2>
+
                 <div class="expertise-content">
                     <div class="doctor-profile">
                         <div class="doctor-image">
                             <img src="./img/dr_ceo.jpg" alt="院長 轟かほる">
                         </div>
                         <div class="doctor-info">
-                            <h3>理事長　轟　かほる</h3>
+                            <h3>理事長・歯科医長　轟 かほる</h3>
                             <div class="credentials">
                                 <p>日本オステオインプラント協会 認定医</p>
                                 <!-- <p>鶴見大学医学部歯科口腔外科 </p> -->
@@ -234,7 +245,7 @@
                                         <li>鶴見大学歯学部卒業</li>
                                         <!-- <li>信州大学医学部附属病院 歯科口腔外科 勤務</li> -->
                                         <!-- <li>口腔外科専門医取得</li> -->
-                                        <li>20〇〇年 轟歯科開院</li>
+                                        <li>昭和51年 轟歯科開院</li>
                                     </ul>
                                 </div>
                                 <div class="certifications">
@@ -257,13 +268,24 @@
                         <div class="doctor-schedule">
                             <h4>担当曜日</h4>
                             <div class="schedule-grid">
+                                <span class="day week">AM</span>
                                 <span class="day active">月</span>
                                 <span class="day active">火</span>
                                 <span class="day active">水</span>
                                 <span class="day active">木</span>
                                 <span class="day inactive">金</span>
-                                <span class="day active">土※</span>
-                                <span class="day inactive">日</span>
+                                <span class="day active">土</span>
+                                <span class="day active">日</span>
+                            </div>
+                            <div class="schedule-grid">
+                                <span class="day week">PM</span>
+                                <span class="day active">月</span>
+                                <span class="day inactive">火</span>
+                                <span class="day active">水</span>
+                                <span class="day active">木</span>
+                                <span class="day inactive">金</span>
+                                <span class="day active">土</span>
+                                <span class="day active">日</span>
                             </div>
                         </div>
                         <div class="treatment-speciality">
@@ -278,63 +300,421 @@
                     </div>
                 </div>
 
-                <div class="expertise-content" style="margin-top: 2rem;">
+                <div class="expertise-content" style="margin-top: 2rem; background-color: #e06d6f3f;">
                     <div class="doctor-profile">
-                        <div class="doctor-image">
-                            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="院長 田中太郎">
-                        </div>
+                        <!-- <div class="doctor-image">
+                            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="院長 轟かほる">
+                        </div> -->
                         <div class="doctor-info">
-                            <h3>中西　〇〇</h3>
-                            <div class="credentials">
-                                <p>日本口腔外科学会　専門医</p>
-                                <!-- <p>鶴見大学医学部歯科口腔外科 </p> -->
+                            <h3>非常勤医師　紹介</h3>
+                            <div class="credentials otherDr">
+                                <p>歯科口腔外科専門医 : 2名</p>
+                                <p>インプラント担当医 : 1名 </p>
+                                <p>一般歯科・虫歯治療 : 1名 </p>
                             </div>
-                            <div class="doctor-details">
+                        </div>
+                            <div class="doctor-detail">
                                 <div class="experience">
-                                    <h4>経歴</h4>
                                     <ul>
-                                        <li>〇〇大学歯学部卒業</li>
-                                        <li>信州大学医学部附属病院 歯科口腔外科 勤務</li>
-                                        <li>口腔外科専門医取得</li>
-                                        <li>2020年から当院にて勤務</li>
+                                        <li>大学病院や総合病院での経験が豊富な歯科医師です</li>
                                     </ul>
                                 </div>
-                                <div class="certifications">
-                                    <h4>学会認定・資格</h4>
-                                    <ul>
-                                        <li>日本口腔外科学会 専門医</li>
-                                        <li>日本歯科医師会 会員</li>
-                                        <li>長野県歯科医師会 会員</li>
-                                    </ul>
-                                </div>
+                            </div>
+                    </div>
+                </div>
+
+                <!-- <div class="expertise-content" style="margin-top: 2rem; border: 2px solid red">
+                    <div class="doctor-profile">
+
+                        <div class="doctor-info">
+                            <h3>診療内容カレンダー</h3>
+                            <div class="credentials">                                
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="schedule-treatment">
+                        <div class="doctor-schedule">
+                            <h4>一般歯科・小児歯科</h4>
+                            <div class="schedule-grid">
+                                <span class="day week">AM</span>
+                                <span class="day active">月</span>
+                                <span class="day active">火</span>
+                                <span class="day active">水</span>
+                                <span class="day active">木</span>
+                                <span class="day active">金</span>
+                                <span class="day active">土</span>
+                                <span class="day active">日</span>
+                            </div>
+                            <div class="schedule-grid">
+                                <span class="day week">PM</span>
+                                <span class="day active">月</span>
+                                <span class="day active">火</span>
+                                <span class="day active">水</span>
+                                <span class="day active">木</span>
+                                <span class="day active">金</span>
+                                <span class="day active">土</span>
+                                <span class="day active">日</span>
                             </div>
                         </div>
                     </div>
                     <div class="schedule-treatment">
                         <div class="doctor-schedule">
-                            <h4>担当曜日</h4>
+                            <h4>口腔外科 診療日</h4>
                             <div class="schedule-grid">
+                                <span class="day week">AM</span>
                                 <span class="day active">月</span>
-                                <span class="day inactive">火</span>
+                                <span class="day active">火</span>
                                 <span class="day active">水</span>
                                 <span class="day inactive">木</span>
                                 <span class="day active">金</span>
-                                <span class="day inactive">土</span>
+                                <span class="day active">土</span>
+                                <span class="day inactive">日</span>
+                            </div>
+                            <div class="schedule-grid">
+                                <span class="day week">PM</span>
+                                <span class="day active">月</span>
+                                <span class="day active">火</span>
+                                <span class="day active">水</span>
+                                <span class="day inactive">木</span>
+                                <span class="day active">金</span>
+                                <span class="day active">土</span>
                                 <span class="day inactive">日</span>
                             </div>
                         </div>
                         <div class="treatment-speciality">
-                            <h4>担当治療</h4>
+                            <h4>治療内容</h4>
                             <ul>
-                                <li>口腔外科全般</li>
                                 <li>親知らず抜歯</li>
-                                <li>インプラント治療</li>
                                 <li>顎関節症治療</li>
+                                <li>口腔外科全般</li>
                             </ul>
                         </div>
                     </div>
-                </div>
+                    <div class="schedule-treatment">
+                        <div class="doctor-schedule">
+                            <h4>インプラント 診療日</h4>
+                            <div class="schedule-grid">
+                                <span class="day week">AM</span>
+                                <span class="day active">月</span>
+                                <span class="day inactive">火</span>
+                                <span class="day active">水</span>
+                                <span class="day active">木</span>
+                                <span class="day active">金</span>
+                                <span class="day active">土</span>
+                                <span class="day active">日</span>
+                            </div>
+                            <div class="schedule-grid">
+                                <span class="day week">PM</span>
+                                <span class="day active">月</span>
+                                <span class="day inactive">火</span>
+                                <span class="day active">水</span>
+                                <span class="day active">木</span>
+                                <span class="day active">金</span>
+                                <span class="day active">土</span>
+                                <span class="day active">日</span>
+                            </div>
+                        </div>
+                        <div class="treatment-speciality">
+                            <h4>診療内容</h4>
+                            <ul>
+                                <li>インプラントの相談</li>
+                                <li>メンテナンス</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="schedule-treatment">
+                        <div class="doctor-schedule">
+                            <h4>ホワイトニング </h4>
+                            <div class="schedule-grid">
+                                <span class="day week">AM</span>
+                                <span class="day active">月</span>
+                                <span class="day active">火</span>
+                                <span class="day active">水</span>
+                                <span class="day active">木</span>
+                                <span class="day active">金</span>
+                                <span class="day active">土</span>
+                                <span class="day active">日</span>
+                            </div>
+                            <div class="schedule-grid">
+                                <span class="day week">PM</span>
+                                <span class="day active">月</span>
+                                <span class="day active">火</span>
+                                <span class="day active">水</span>
+                                <span class="day active">木</span>
+                                <span class="day active">金</span>
+                                <span class="day active">土</span>
+                                <span class="day active">日</span>
+                            </div>
+                        </div>
+                        <div class="treatment-speciality">
+                            <h4>診療内容</h4>
+                            <ul>
+                                <li>ホワイトニングの相談</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
             </div>
+        </section>
+
+
+
+        <!-- 診療メニューセクション -->
+        <section class="menu-section">
+            <div class="container">
+                <h2 class="section-title">診療メニュー</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <a href="general-dentistry.html" class="menu-link">
+                            <div class="menu-image">
+                                <img src="img/normal_care.jpg" alt="一般歯科・虫歯治療">
+                            </div>
+                            <div class="menu-content">
+                                <h3>一般歯科・虫歯治療</h3>
+                                <p>虫歯治療から定期検診まで、お口の健康をトータルサポート</p>
+                                <ul>
+                                    <li>虫歯治療</li>
+                                    <li>根管治療</li>
+                                    <li>歯周病治療</li>
+                                    <li>定期検診・クリーニング</li>
+                                </ul>
+                            </div>
+                        </a>
+                        <div class="schedule-treatment">
+                            <div class="doctor-schedule">
+                                <div class="schedule-grid">
+                                    <span class="day week">AM</span>
+                                    <span class="day active">月</span>
+                                    <span class="day active">火</span>
+                                    <span class="day active">水</span>
+                                    <span class="day active">木</span>
+                                    <span class="day active">金</span>
+                                    <span class="day active">土</span>
+                                    <span class="day active">日</span>
+                                </div>
+                                <div class="schedule-grid">
+                                    <span class="day week">PM</span>
+                                    <span class="day active">月</span>
+                                    <span class="day active">火</span>
+                                    <span class="day active">水</span>
+                                    <span class="day active">木</span>
+                                    <span class="day active">金</span>
+                                    <span class="day active">土</span>
+                                    <span class="day active">日</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <a href="oral-surgery.html" class="menu-link">
+                            <div class="menu-image">
+                                <img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="口腔外科・親知らず">
+                            </div>
+                            <div class="menu-content">
+                                    <h3>口腔外科・親知らず</h3>
+                                    <p>専門医による安全な親知らず抜歯と口腔外科治療</p>
+                                <ul>
+                                    <li>親知らず抜歯</li>
+                                    <li>顎関節症治療</li>
+                                    <li>口腔粘膜疾患</li>
+                                    <li>外傷治療</li>
+                                </ul>
+                            </div>
+                        </a>
+                        <div class="schedule-treatment">
+                            <div class="doctor-schedule">
+                                <div class="schedule-grid">
+                                    <span class="day week">AM</span>
+                                    <span class="day active">月</span>
+                                    <span class="day active">火</span>
+                                    <span class="day active">水</span>
+                                    <span class="day active">木</span>
+                                    <span class="day active">金</span>
+                                    <span class="day active">土</span>
+                                    <span class="day inactive">日</span>
+                                </div>
+                                <div class="schedule-grid">
+                                    <span class="day week">PM</span>
+                                    <span class="day active">月</span>
+                                    <span class="day active">火</span>
+                                    <span class="day active">水</span>
+                                    <span class="day active">木</span>
+                                    <span class="day active">金</span>
+                                    <span class="day active">土</span>
+                                    <span class="day inactive">日</span>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="menu-item">
+                        <a href="implant.html" class="menu-link">
+                            <div class="menu-image">
+                                    <img src="img/implant.png" alt="一般歯科・虫歯治療">
+                            </div>
+                            <div class="menu-content">
+                                <h3>インプラント</h3>
+                                <p>CT診断による精密なインプラント治療</p>
+                                <ul>
+                                    <li>CT診断</li>
+                                    <li>インプラント埋入</li>
+                                    <li>骨造成術</li>
+                                    <li>メンテナンス</li>
+                                </ul>
+                            </div>
+                        </a>
+                        <div class="schedule-treatment">
+                            <div class="doctor-schedule">
+                                <div class="schedule-grid">
+                                    <span class="day week">AM</span>
+                                    <span class="day active">月</span>
+                                    <span class="day active">火</span>
+                                    <span class="day active">水</span>
+                                    <span class="day active">木</span>
+                                    <span class="day active">金</span>
+                                    <span class="day active">土</span>
+                                    <span class="day active">日</span>
+                                </div>
+                                <div class="schedule-grid">
+                                    <span class="day week">PM</span>
+                                    <span class="day active">月</span>
+                                    <span class="day inactive">火</span>
+                                    <span class="day active">水</span>
+                                    <span class="day inactive">木</span>
+                                    <span class="day active">金</span>
+                                    <span class="day active">土</span>
+                                    <span class="day active">日</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <a href="pediatric-dentistry.html" class="menu-link">
+                            <div class="menu-image">
+                                    <img src="https://thumb.photo-ac.com/5a/5ac63a5f7b26a139a4d4ba5e589dfdf5_t.jpeg" alt="一般歯科・虫歯治療">
+                            </div>
+                            <div class="menu-content">
+                                <h3>小児歯科</h3>
+                                <p>お子様が安心して通える環境での小児歯科治療</p>
+                                <ul>
+                                    <li>小児虫歯治療</li>
+                                    <li>フッ素塗布</li>
+                                    <li>歯並び相談</li>
+                                </ul>
+                            </div>
+                        </a>
+                        <div class="schedule-treatment">
+                            <div class="doctor-schedule">
+                                <div class="schedule-grid">
+                                    <span class="day week">AM</span>
+                                    <span class="day active">月</span>
+                                    <span class="day active">火</span>
+                                    <span class="day active">水</span>
+                                    <span class="day active">木</span>
+                                    <span class="day active">金</span>
+                                    <span class="day active">土</span>
+                                    <span class="day active">日</span>
+                                </div>
+                                <div class="schedule-grid">
+                                    <span class="day week">PM</span>
+                                    <span class="day active">月</span>
+                                    <span class="day active">火</span>
+                                    <span class="day active">水</span>
+                                    <span class="day active">木</span>
+                                    <span class="day active">金</span>
+                                    <span class="day active">土</span>
+                                    <span class="day active">日</span>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="menu-item">
+                        <a href="orthodontics.html" class="menu-link">
+                            <div class="menu-image">
+                                    <img src="img/orthodontics.png" alt="一般歯科・虫歯治療">
+                            </div>
+                            <div class="menu-content">
+                                <h3>歯列矯正</h3>
+                                <p>美しい歯並びと正しい噂み合わせを実現</p>
+                                <ul>
+                                    <li>ワイヤー矯正</li>
+                                    <li>マウスピース矯正</li>
+                                    <li>部分矯正</li>
+                                    <li>小児矯正</li>
+                                </ul>
+                            </div>
+                        </a>
+                        <div class="schedule-treatment">
+                            <div class="doctor-schedule">
+                                <div class="schedule-grid">
+                                    <span class="day week">AM</span>
+                                    <span class="day active">月</span>
+                                    <span class="day active">火</span>
+                                    <span class="day active">水</span>
+                                    <span class="day active">木</span>
+                                    <span class="day active">金</span>
+                                    <span class="day active">土</span>
+                                    <span class="day active">日</span>
+                                </div>
+                                <div class="schedule-grid">
+                                    <span class="day week">PM</span>
+                                    <span class="day active">月</span>
+                                    <span class="day inactive">火</span>
+                                    <span class="day active">水</span>
+                                    <span class="day active">木</span>
+                                    <span class="day active">金</span>
+                                    <span class="day inactive">土</span>
+                                    <span class="day active">日</span>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="menu-item">
+                        <a href="whitening.html" class="menu-link">
+                            <div class="menu-image">
+                                    <img src="img/whitening.png" alt="一般歯科・虫歯治療">
+                            </div>
+                            <div class="menu-content">
+                                <h3>ホワイトニング</h3>
+                                <p>美しい白い歯で笑顔に自信を</p>
+                                <ul>
+                                    <li>オフィスホワイトニング</li>
+                                    <li>ホームホワイトニング</li>
+                                    <li>デュアルホワイトニング</li>
+                                    <li>メンテナンス</li>
+                                </ul>
+                            </div>
+                        </a>
+                        <div class="schedule-treatment">
+                            <div class="doctor-schedule">
+                                <div class="schedule-grid">
+                                    <span class="day week">AM</span>
+                                    <span class="day active">月</span>
+                                    <span class="day active">火</span>
+                                    <span class="day active">水</span>
+                                    <span class="day active">木</span>
+                                    <span class="day active">金</span>
+                                    <span class="day active">土</span>
+                                    <span class="day active">日</span>
+                                </div>
+                                <div class="schedule-grid">
+                                    <span class="day week">PM</span>
+                                    <span class="day active">月</span>
+                                    <span class="day active">火</span>
+                                    <span class="day active">水</span>
+                                    <span class="day active">木</span>
+                                    <span class="day active">金</span>
+                                    <span class="day active">土</span>
+                                    <span class="day active">日</span>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+            </div>
+        </section>
+
+        <section class="cta-tell">
+            <p>ご予約・お問い合わせはお電話から</p>
+            <a href="tel:026-248-1391" class="tel-number-cta">026-248-1391</a>
         </section>
 
         <!-- 患者様の声セクション -->
@@ -366,116 +746,6 @@
                 <div class="google-reviews">
                     <p><strong>Google口コミ評価 ★4.5/5.0 （52件のレビュー）</strong></p>
                 </div>
-            </div>
-        </section>
-
-        <!-- 診療メニューセクション -->
-        <section class="menu-section">
-            <div class="container">
-                <h2 class="section-title">診療メニュー</h2>
-                <div class="menu-grid">
-                    <div class="menu-item">
-                        <a href="general-dentistry.html" class="menu-link">
-                            <div class="menu-image">
-                                <img src="img/normal_care.jpg" alt="一般歯科・虫歯治療">
-                            </div>
-                            <div class="menu-content">
-                                <h3>一般歯科・虫歯治療</h3>
-                                <p>虫歯治療から定期検診まで、お口の健康をトータルサポート</p>
-                                <ul>
-                                    <li>虫歯治療</li>
-                                    <li>根管治療</li>
-                                    <li>歯周病治療</li>
-                                    <li>定期検診・クリーニング</li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="menu-item">
-                        <a href="general-dentistry.html" class="menu-link">
-                            <div class="menu-image">
-                                <img src="img/normal_care.jpg" alt="一般歯科・虫歯治療">
-                            </div>
-                            <div class="menu-content">
-                                    <h3>口腔外科・親知らず</h3>
-                                    <p>専門医による安全な親知らず抜歯と口腔外科治療</p>
-                                <ul>
-                                    <li>親知らず抜歯</li>
-                                    <li>顎関節症治療</li>
-                                    <li>口腔粘膜疾患</li>
-                                    <li>外傷治療</li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="menu-item">
-                        <a href="general-dentistry.html" class="menu-link">
-                            <div class="menu-image">
-                                    <img src="img/implant.png" alt="一般歯科・虫歯治療">
-                            </div>
-                            <div class="menu-content">
-                                <h3>インプラント</h3>
-                                <p>CT診断による精密なインプラント治療</p>
-                                <ul>
-                                    <li>CT診断</li>
-                                    <li>インプラント埋入</li>
-                                    <li>骨造成術</li>
-                                    <li>メンテナンス</li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="menu-item">
-                        <a href="general-dentistry.html" class="menu-link">
-                            <div class="menu-image">
-                                    <img src="img/normal_care.jpg" alt="一般歯科・虫歯治療">
-                            </div>
-                            <div class="menu-content">
-                                <h3>小児歯科</h3>
-                                <p>お子様が安心して通える環境での小児歯科治療</p>
-                                <ul>
-                                    <li>小児虫歯治療</li>
-                                    <li>フッ素塗布</li>
-                                    <li>シーラント</li>
-                                    <li>歯並び相談</li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="menu-item">
-                        <a href="general-dentistry.html" class="menu-link">
-                            <div class="menu-image">
-                                    <img src="img/orthodontics.png" alt="一般歯科・虫歯治療">
-                            </div>
-                            <div class="menu-content">
-                                <h3>歯列矯正</h3>
-                                <p>美しい歯並びと正しい噂み合わせを実現</p>
-                                <ul>
-                                    <li>ワイヤー矯正</li>
-                                    <li>マウスピース矯正</li>
-                                    <li>部分矯正</li>
-                                    <li>小児矯正</li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="menu-item">
-                        <a href="general-dentistry.html" class="menu-link">
-                            <div class="menu-image">
-                                    <img src="img/whitening.png" alt="一般歯科・虫歯治療">
-                            </div>
-                            <div class="menu-content">
-                                <h3>ホワイトニング</h3>
-                                <p>美しい白い歯で笑顔に自信を</p>
-                                <ul>
-                                    <li>オフィスホワイトニング</li>
-                                    <li>ホームホワイトニング</li>
-                                    <li>デュアルホワイトニング</li>
-                                    <li>メンテナンス</li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
             </div>
         </section>
 
@@ -570,82 +840,6 @@
             </div>
         </section>
 
-        <!-- Web予約フォームセクション -->
-        <!-- <section class="reservation-section" id="reservation">
-            <div class="container">
-                <h2 class="section-title">Web予約フォーム</h2>
-                <div class="reservation-content">
-                    <div class="reservation-info">
-                        <h3>簡単3ステップで予約完了</h3>
-                        <div class="reservation-steps">
-                            <div class="res-step">
-                                <span class="res-step-num">1</span>
-                                <span>基本情報入力</span>
-                            </div>
-                            <div class="res-step">
-                                <span class="res-step-num">2</span>
-                                <span>希望日時選択</span>
-                            </div>
-                            <div class="res-step">
-                                <span class="res-step-num">3</span>
-                                <span>送信完了</span>
-                            </div>
-                        </div>
-                        <p>※Web予約は24時間受付。確認のお電話をさせていただきます。</p>
-                    </div>
-                    <form class="reservation-form">
-                        <div class="form-group">
-                            <label for="name">お名前 <span class="required">*</span></label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">電話番号 <span class="required">*</span></label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">メールアドレス</label>
-                            <input type="email" id="email" name="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="date">希望日 <span class="required">*</span></label>
-                            <input type="date" id="date" name="date" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="time">希望時間帯 <span class="required">*</span></label>
-                            <select id="time" name="time" required>
-                                <option value="">時間帯を選択してください</option>
-                                <option value="morning">午前中（9:00-12:00）</option>
-                                <option value="afternoon">午後（14:00-17:00）</option>
-                                <option value="evening">夕方（17:00-18:00）</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="treatment">ご希望の治療内容</label>
-                            <select id="treatment" name="treatment">
-                                <option value="">選択してください</option>
-                                <option value="checkup">検診・クリーニング</option>
-                                <option value="cavity">虫歯治療</option>
-                                <option value="wisdom">親知らず</option>
-                                <option value="implant">インプラント相談</option>
-                                <option value="pediatric">小児歯科</option>
-                                <option value="emergency">痛みがある（急患）</option>
-                                <option value="other">その他</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">症状・ご要望など</label>
-                            <textarea id="message" name="message" rows="4"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-large">予約内容を送信する</button>
-                    </form>
-                </div>
-                <div class="line-info">
-                    <h3>LINEでも予約受付中</h3>
-                    <p>お友だち追加で簡単予約！治療に関する質問もお気軽にどうぞ。</p>
-                    <a href="#" class="btn btn-line">LINEで予約・相談</a>
-                </div>
-            </div>
-        </section> -->
 
         <!-- FAQセクション -->
         <section class="faq-section">
@@ -654,11 +848,11 @@
                 <div class="faq-list">
                     <div class="faq-item">
                         <div class="faq-question">
-                            <h4>土日祝日も診療していますか？</h4>
+                            <h4>土日も診療していますか？</h4>
                             <span class="faq-toggle">+</span>
                         </div>
                         <div class="faq-answer">
-                            <p>はい、土日祝日も17時まで診療しています。平日お忙しい方もお気軽にお越しください。</p>
+                            <p>はい、土曜日は18:30まで、日曜日も18:00まで診療しています。平日お忙しい方もお気軽にお越しください。</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -676,7 +870,7 @@
                             <span class="faq-toggle">+</span>
                         </div>
                         <div class="faq-answer">
-                            <p>20台分の駐車場を完備しています。バリアフリー対応で、車椅子の方でも安心してお越しいただけます。</p>
+                            <p>病院の正面に駐車場を完備しています。バリアフリー対応で、車椅子の方でも安心してお越しいただけます。</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -685,7 +879,7 @@
                             <span class="faq-toggle">+</span>
                         </div>
                         <div class="faq-answer">
-                            <p>キッズスペースを設けており、お子様連れでも安心です。スタッフがお子様の対応もいたします。</p>
+                            <p>お子様連れでも安心です。スタッフがお子様の対応もいたします。</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -721,7 +915,7 @@
                             <span class="faq-toggle">+</span>
                         </div>
                         <div class="faq-answer">
-                            <p>口腔外科専門医が在籍しているため、一般歯科では対応困難な症例も治療可能です。当院で対応できない症例は連携している医療機関に紹介いたします。まずはご相談ください。</p>
+                            <p>口腔外科専門医が在籍しているため、一般歯科では対応困難な症例も治療可能です。入院や、大掛かりな手術が必要と認めた場合は、連携している医療機関に紹介いたします。まずはご相談ください。</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -739,7 +933,7 @@
                             <span class="faq-toggle">+</span>
                         </div>
                         <div class="faq-answer">
-                            <p>症状や治療内容により異なります。初診時に詳細な治療計画と期間をご説明いたします。</p>
+                            <p>症状や治療内容により異なります。初診時に詳細な治療計画と期間をご説明いたします。<a href="#" style="color: red;">こちらのページ</a>も参考にしてください</p>
                         </div>
                     </div>
                 </div>
@@ -755,11 +949,11 @@
                         <h3>轟歯科</h3>
                         <div class="info-item">
                             <span class="info-label">住所</span>
-                            <span>〒382-0000 長野県須坂市大字須坂1239</span>
+                            <span>〒382-0911 長野県須坂市大字須坂1239</span>
                         </div>
                         <div class="info-item">
                             <span class="info-label">電話</span>
-                            <a href="tel:026-245-0126">026-245-0126</a>
+                            <a href="tel:026-248-1391">026-248-1391</a>
                         </div>
                         <div class="info-item">
                             <span class="info-label">アクセス</span>
@@ -842,6 +1036,37 @@
                 </div>
             </div>
         </section>
+        <section class="payment-section">
+            <div class="payment-info">
+                    <h3>お支払い方法</h3>
+                    <div class="payment-methods">
+                        <div class="payment-item">
+                            <div class="payment-icon">💳</div>
+                            <div class="payment-content">
+                                <h4>各種クレジットカード</h4>
+                                <p>VISA・MasterCard・JCB・AMEX対応</p>
+                            </div>
+                        </div>
+                        <div class="payment-item">
+                            <div class="payment-icon">📱</div>
+                            <div class="payment-content">
+                                <h4>電子マネー・QR決済</h4>
+                                <p>PayPay・楽天Pay・d払い対応</p>
+                            </div>
+                        </div>
+                        <div class="payment-item">
+                            <div class="payment-icon">💰</div>
+                            <div class="payment-content">
+                                <h4>分割払い</h4>
+                                <p>高額治療は分割相談可能</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+                
+
+
     </main>
 
     <!-- フッターCTA -->
@@ -852,7 +1077,7 @@
                 <h2>須坂市で<span class="footer-cta-accent">口腔外科専門医</span>をお探しなら</h2>
                 <p>口腔外科専門医による安心の治療<br>当日予約・急患対応いたします</p>
                 <div class="footer-cta-buttons">
-                    <a href="tel:026-245-0126" class="btn btn-primary btn-large">
+                    <a href="tel:026-248-1391" class="btn btn-primary btn-large">
                         <span class="btn-icon">📞</span>
                         今すぐ電話で予約
                     </a>
@@ -862,9 +1087,9 @@
                     </a> -->
                 </div>
                 <div class="footer-contact">
-                    <p>📞 026-245-0126</p>
+                    <p>📞 026-248-1391</p>
                     <p>📍 長野県須坂市大字須坂1239</p>
-                    <p> 土日も18:30まで診療</p>
+                    <p> 土日も18:00まで診療</p>
                 </div>
             </div>
         </div>
@@ -876,8 +1101,8 @@
             <div class="footer-content">
                 <div class="footer-info">
                     <h3>轟歯科</h3>
-                    <p>〒382-0000 長野県須坂市大字須坂</p>
-                    <p>TEL: 026-245-0126</p>
+                    <p>〒382-0911 長野県須坂市大字須坂</p>
+                    <p>TEL: 026-248-1391</p>
                 </div>
                 <div class="footer-menu">
                     <h4>診療メニュー</h4>
@@ -890,12 +1115,12 @@
                 </div>
                 <div class="footer-hours">
                     <h4>診療時間</h4>
-                    <p>平日 9:00-18:00</p>
-                    <p>土日祝 9:00-17:00</p>
+                    <p>平日・土 9:30-18:30</p>
+                    <p>日 9:30-18:00</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 轟歯科 All Rights Reserved.</p>
+                <p>&copy; 2025 医療法人轟歯科 All Rights Reserved.</p>
             </div>
         </div>
     </footer>
