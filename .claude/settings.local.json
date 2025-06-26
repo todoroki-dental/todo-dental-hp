@@ -5,7 +5,9 @@
       "WebFetch(domain:www.todoroki-h.com)",
       "mcp__ide__getDiagnostics",
       "Bash(python3:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(unset GH_TOKEN)"
     ],
     "deny": []
   }
