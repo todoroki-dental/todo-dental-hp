@@ -156,3 +156,61 @@ Wixでのデプロイを想定した静的HTML/CSS/JSサイトです。ビルド
 - `.page-header`: ページヘッダー用（general.cssで定義）
 - `.treatment-grid`: 治療メニューグリッド用
 - `.case-studies`: 症例紹介用（oral_surgery.cssで定義）
+
+## プロジェクト進捗記録
+
+### 2025年6月26日 - SEO最適化とサイト構造改善
+
+#### 完了した作業
+1. **ファビコン実装**
+   - 全HTMLファイルにfavicon.pngリンクを追加
+   - 複数サイズのファビコン設定（16x16, 32x32, Apple Touch Icon）
+   - PWA対応のmanifest.json参照追加
+
+2. **SEO大幅強化**
+   - **メタタグ最適化**: keywords, author, robots, 地理的情報（geo.region, geo.position）
+   - **OGP設定**: Facebook/Twitter向けソーシャルメディア最適化
+   - **正規URL設定**: canonical URLと代替言語設定
+   - **モバイル最適化**: Apple Mobile Web App設定、電話番号検出
+
+3. **構造化データ実装**
+   - **LocalBusiness/Dentist Schema**: 歯科医院情報、営業時間、料金、支払い方法
+   - **FAQ Schema**: よくある質問7項目の構造化データ
+   - **MedicalOrganization Schema**: 医療機関としての専門性と資格情報
+   - **WebSite Schema**: サイト基本情報
+
+4. **サイト構造整備**
+   - **sitemap.html**: ユーザー向けサイトマップページ作成
+   - **sitemap.xml**: 検索エンジン向けXMLサイトマップ
+   - **robots.txt**: 検索エンジンクロール制御ファイル
+
+5. **GitHubリポジトリ管理**
+   - リポジトリ: `todoroki-dental/todo-dental-hp`
+   - すべての変更を適切にコミット・プッシュ済み
+   - 認証トークンのセキュア管理
+
+#### 技術的改善点
+- **DNS Prefetch**: 外部リソース（fonts.googleapis.com等）の事前DNS解決
+- **プリロード**: 重要CSSとフォントのpreload設定
+- **パフォーマンス最適化**: ファビコン、フォント、画像の最適化
+
+#### 現在のSEO対応状況
+- ✅ 基本メタタグ完備
+- ✅ 構造化データ3種類実装
+- ✅ OGP・Twitter Card対応
+- ✅ サイトマップ・robots.txt実装
+- ✅ モバイル最適化完了
+- ✅ 地域SEO（長野県須坂市）対応
+
+#### 次の優先作業項目
+1. Google Search Console設定とサイトマップ送信
+2. Google Analytics・Google Tag Manager導入
+3. 画像ファイルの最適化（WebP形式対応）
+4. ページ速度のさらなる改善
+5. アクセシビリティ監査と改善
+
+#### 技術仕様
+- **ドメイン**: `todo-dental.todoroki-h.com`（構造化データ内で指定）
+- **ターゲット地域**: 長野県須坂市（座標: 36.6471, 138.3084）
+- **主要ペルソナ**: 土日診療を求める患者、親知らず治療、インプラント相談、小児歯科
+- **コンバージョン目標**: 月30-40件の新患予約獲得
