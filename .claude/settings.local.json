@@ -4,7 +4,8 @@
       "Bash(open:*)",
       "WebFetch(domain:www.todoroki-h.com)",
       "mcp__ide__getDiagnostics",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(git add:*)"
     ],
     "deny": []
   }
