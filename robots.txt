@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# 除外ファイル
+Disallow: /css/
+Disallow: /js/
+Disallow: /.git/
+Disallow: /.vscode/
+Disallow: /.claude/
+Disallow: /node_modules/
+Disallow: /CLAUDE.md
+Disallow: /readme.md
+Disallow: /git.txt
+
+# サイトマップの場所
+Sitemap: https://todo-dental.todoroki-h.com/sitemap.xml
+
+# クロール頻度の設定
+Crawl-delay: 1
+
+# 主要ページの優先度設定（コメント）
+# トップページ: 最高優先度
+# 口腔外科: 高優先度（USP）
+# 一般歯科・インプラント: 中優先度
+# その他診療メニュー: 標準優先度

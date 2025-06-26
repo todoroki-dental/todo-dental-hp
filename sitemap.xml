@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- メインページ -->
+    <url>
+        <loc>https://todo-dental.todoroki-h.com/</loc>
+        <lastmod>2025-01-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://todo-dental.todoroki-h.com/img/hero-main.jpg</image:loc>
+            <image:title>轟歯科 - 須坂市で土日診療の歯医者</image:title>
+        </image:image>
+    </url>
+    
+    <!-- 一般歯科・虫歯治療 -->
+    <url>
+        <loc>https://todo-dental.todoroki-h.com/general-dentistry.html</loc>
+        <lastmod>2025-01-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://todo-dental.todoroki-h.com/img/general-dentistry.jpg</image:loc>
+            <image:title>一般歯科・虫歯治療 - 轟歯科</image:title>
+        </image:image>
+    </url>
+    
+    <!-- 口腔外科・親知らず抜歯 -->
+    <url>
+        <loc>https://todo-dental.todoroki-h.com/oral-surgery.html</loc>
+        <lastmod>2025-01-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://todo-dental.todoroki-h.com/img/oral-surgery.jpg</image:loc>
+            <image:title>口腔外科・親知らず抜歯 - 轟歯科</image:title>
+        </image:image>
+    </url>
+    
+    <!-- インプラント -->
+    <url>
+        <loc>https://todo-dental.todoroki-h.com/implant.html</loc>
+        <lastmod>2025-01-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://todo-dental.todoroki-h.com/img/implant.jpg</image:loc>
+            <image:title>インプラント治療 - 轟歯科</image:title>
+        </image:image>
+    </url>
+    
+    <!-- 小児歯科 -->
+    <url>
+        <loc>https://todo-dental.todoroki-h.com/pediatric-dentistry.html</loc>
+        <lastmod>2025-01-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://todo-dental.todoroki-h.com/img/pediatric-dentistry.jpg</image:loc>
+            <image:title>小児歯科 - 轟歯科</image:title>
+        </image:image>
+    </url>
+    
+    <!-- 歯列矯正 -->
+    <url>
+        <loc>https://todo-dental.todoroki-h.com/orthodontics.html</loc>
+        <lastmod>2025-01-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://todo-dental.todoroki-h.com/img/orthodontics.jpg</image:loc>
+            <image:title>歯列矯正 - 轟歯科</image:title>
+        </image:image>
+    </url>
+    
+    <!-- ホワイトニング -->
+    <url>
+        <loc>https://todo-dental.todoroki-h.com/whitening.html</loc>
+        <lastmod>2025-01-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <image:image>
+            <image:loc>https://todo-dental.todoroki-h.com/img/whitening.jpg</image:loc>
+            <image:title>ホワイトニング - 轟歯科</image:title>
+        </image:image>
+    </url>
+    
+</urlset>
