@@ -43,11 +43,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const hamburgerMenu = document.querySelector('.hamburger-menu');
         const mobileNav = document.querySelector('.mobile-nav');
         
-        console.log('Hamburger menu element:', hamburgerMenu);
-        console.log('Mobile nav element:', mobileNav);
+        // console.log('Hamburger menu element:', hamburgerMenu);
+        // console.log('Mobile nav element:', mobileNav);
         
         if (hamburgerMenu && mobileNav) {
-            console.log('Setting up hamburger menu functionality');
+            // console.log('Setting up hamburger menu functionality');
             hamburgerMenu.addEventListener('click', function() {
                 // console.log('Hamburger menu clicked');
                 // ハンバーガーメニューボタンとモバイルナビの切り替え
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             toggle.addEventListener('click', function(e) {
                 e.preventDefault();
-                console.log('Dropdown toggle clicked');
+                // console.log('Dropdown toggle clicked');
                 
                 // 他のドロップダウンを閉じる
                 dropdownToggles.forEach(otherToggle => {
@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 lastScrollTop = scrollTop;
             });
         } else {
-            console.error('Header element not found for scroll control');
+            // console.error('Header element not found for scroll control');
         }
     }
     
