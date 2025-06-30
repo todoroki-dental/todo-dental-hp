@@ -7,7 +7,8 @@
       "Bash(python3:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(unset GH_TOKEN)"
+      "Bash(unset GH_TOKEN)",
+      "Bash(git checkout:*)"
     ],
     "deny": []
   }
