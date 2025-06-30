@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (headerPlaceholder) {
         fetch('./header.html')
             .then(response => {
-                console.log('Header fetch response:', response.status, response.statusText);
+                // console.log('Header fetch response:', response.status, response.statusText);
                 if (!response.ok) {
                     throw new Error(`Header file not found: ${response.status} ${response.statusText}`);
                 }
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (hamburgerMenu && mobileNav) {
             console.log('Setting up hamburger menu functionality');
             hamburgerMenu.addEventListener('click', function() {
-                console.log('Hamburger menu clicked');
+                // console.log('Hamburger menu clicked');
                 // ハンバーガーメニューボタンとモバイルナビの切り替え
                 hamburgerMenu.classList.toggle('active');
                 mobileNav.classList.toggle('active');
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // デスクトップドロップダウンメニューの制御
         const dropdownToggles = document.querySelectorAll('.nav-dropdown-toggle');
-        console.log('Dropdown toggles found:', dropdownToggles.length);
+        // console.log('Dropdown toggles found:', dropdownToggles.length);
         
         dropdownToggles.forEach(toggle => {
             const dropdown = toggle.closest('.nav-dropdown');
@@ -229,15 +229,15 @@ document.addEventListener('DOMContentLoaded', function() {
             window.addEventListener('scroll', function() {
                 const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                 
-                console.log('Scroll event:', scrollTop, 'lastScrollTop:', lastScrollTop);
+                // console.log('Scroll event:', scrollTop, 'lastScrollTop:', lastScrollTop);
                 
                 if (scrollTop > lastScrollTop && scrollTop > 50) {
                     // 下にスクロール時はヘッダーを隠す
-                    console.log('Hiding header');
+                    // console.log('Hiding header');
                     header.style.transform = 'translateY(-100%)';
                 } else {
                     // 上にスクロール時はヘッダーを表示
-                    console.log('Showing header');
+                    // console.log('Showing header');
                     header.style.transform = 'translateY(0)';
                 }
                 
