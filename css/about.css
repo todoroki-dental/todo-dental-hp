@@ -1,0 +1,412 @@
+/* About Page Specific Styles */
+
+/* 医院紹介セクション */
+.clinic-intro {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.intro-text h2 {
+    font-size: 2.5rem;
+    color: #e06d6e;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.intro-lead {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    color: #555;
+}
+
+.intro-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 医院の特徴セクション */
+.about-features {
+    padding: 5rem 0;
+    background-color: #fff;
+}
+
+.about-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.about-feature-item {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.about-feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.about-feature-item h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.about-feature-item p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* 院長挨拶セクション */
+.director-message {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.message-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-director-info {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    padding: 2.5rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.about-director-image {
+    flex-shrink: 0;
+}
+
+.about-director-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #e06d6e;
+}
+
+.about-director-details h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.about-credentials p {
+    color: #e06d6e;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.message-text {
+    background: #fff;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.message-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.message-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* 医院概要セクション */
+.clinic-overview {
+    padding: 5rem 0;
+    background-color: #fff;
+}
+
+.overview-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.overview-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.overview-table th,
+.overview-table td {
+    padding: 1.5rem 2rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.overview-table th {
+    background-color: #e06d6e;
+    color: #fff;
+    font-weight: 600;
+    width: 30%;
+    font-size: 1.1rem;
+}
+
+.overview-table td {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.overview-table td a {
+    color: #e06d6e;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.overview-table td a:hover {
+    text-decoration: underline;
+}
+
+.overview-table tr:last-child th,
+.overview-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* 設備紹介セクション */
+.equipment-section {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.about-equipment-grid {
+    display: grid;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.about-equipment-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    background: #fff;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.about-equipment-item:nth-child(even) {
+    grid-template-columns: 1fr 1fr;
+}
+
+.about-equipment-item:nth-child(even) .about-equipment-image {
+    order: 2;
+}
+
+.about-equipment-item:nth-child(even) .about-equipment-content {
+    order: 1;
+}
+
+.about-equipment-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.about-equipment-content h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.about-equipment-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* アクセスマップセクション */
+.access-map {
+    padding: 5rem 0;
+    background-color: #fff;
+}
+
+.about-map-container {
+    margin: 3rem 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-access-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.about-access-detail {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.about-access-detail h3 {
+    font-size: 1.3rem;
+    color: #e06d6e;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.about-access-detail p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .intro-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .intro-text h2 {
+        font-size: 2rem;
+    }
+
+    .intro-lead {
+        font-size: 1.1rem;
+    }
+
+    .about-features-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-feature-item {
+        padding: 2rem;
+    }
+
+    .about-director-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .about-director-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-director-details h3 {
+        font-size: 1.5rem;
+    }
+
+    .message-text {
+        padding: 2rem;
+    }
+
+    .overview-table th,
+    .overview-table td {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .overview-table th {
+        width: 35%;
+    }
+
+    .about-equipment-item {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .about-equipment-item:nth-child(even) {
+        grid-template-columns: 1fr;
+    }
+
+    .about-equipment-item:nth-child(even) .about-equipment-image,
+    .about-equipment-item:nth-child(even) .about-equipment-content {
+        order: 0;
+    }
+
+    .about-equipment-image img {
+        height: 200px;
+    }
+
+    .about-equipment-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .about-access-info {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-access-detail {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-director-details h3 {
+        font-size: 1.3rem;
+    }
+
+    .overview-table th,
+    .overview-table td {
+        padding: 0.8rem;
+    }
+
+    .about-equipment-content h3 {
+        font-size: 1.3rem;
+    }
+}
