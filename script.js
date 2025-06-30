@@ -37,6 +37,42 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
     
+    // 共通フッターの読み込み
+    const footerPlaceholder = document.getElementById('footer-placeholder');
+    if (footerPlaceholder) {
+        fetch('./footer.html')
+            .then(response => {
+                console.log('Footer fetch response:', response.status, response.statusText);
+                if (!response.ok) {
+                    throw new Error(`Footer file not found: ${response.status} ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                footerPlaceholder.innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+                // フォールバック: 基本的なフッターを表示
+                footerPlaceholder.innerHTML = `
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>轟歯科</h3>
+                <p>〒382-0911 長野県須坂市大字須坂</p>
+                <p>TEL: 026-248-1391</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 医療法人轟歯科 All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+                `;
+            });
+    }
+    
     // ヘッダー機能の初期化（ヘッダー読み込み後に実行）
     function initializeHeaderFunctionality() {
         // ハンバーガーメニューの機能
