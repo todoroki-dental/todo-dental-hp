@@ -10,7 +10,8 @@
       "Bash(unset GH_TOKEN)",
       "Bash(git checkout:*)",
       "Bash(git push:*)",
-      "Bash(git merge:*)"
+      "Bash(git merge:*)",
+      "Bash(git branch:*)"
     ],
     "deny": []
   }
