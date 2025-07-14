@@ -288,6 +288,17 @@
     background: rgba(156, 39, 176, 0.05);
 }
 
+/* .menu-detail-image {
+    align-items: center;
+} */
+
+.menu-detail-image img {
+    width: 80%;
+    height: 12.5rem;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
 /* レスポンシブデザイン */
 @media (max-width: 768px) {
     .features-grid {

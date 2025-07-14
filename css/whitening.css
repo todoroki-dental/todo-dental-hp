@@ -150,7 +150,7 @@
     color: white;
     padding: 1rem;
     border-radius: 0.5rem;
-    margin: -2rem -2rem -2rem -2rem;
+    margin: -2rem -2rem -1rem -2rem;
     margin-top: 1.5rem;
 }
 
@@ -175,14 +175,16 @@
 .price-label {
     display: block;
     font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+    /* margin-bottom: 0.5rem; */
     opacity: 0.9;
+    color: white;
 }
 
 .price-value {
     font-size: 1.5rem;
     font-weight: 700;
     display: block;
+    color: white;
 }
 
 .price-note {
