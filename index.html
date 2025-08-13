@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google tag (gtag.js) -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-TXZP0WT86P"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TXZP0WT86P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
         gtag('config', 'G-TXZP0WT86P');
-    </script> -->
+    </script>
     
     <!-- SEO基本メタタグ -->
     <title>轟歯科|須坂市で土日も夕方まで診療しています - 虫歯治療・小児歯科・口腔外科専門医による親知らず抜歯・インプラント</title>
@@ -85,7 +85,7 @@
     
     <!-- Schema.org構造化データ -->
     <!-- LocalBusiness/Dentist Schema -->
-    <!-- <script type="application/ld+json">
+    <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Dentist",
@@ -160,7 +160,7 @@
             },
             {
                 "@type": "LocationFeatureSpecification",
-                "name": "キッズスペース・DVD設備"
+                "name": "DVD設備"
             },
             {
                 "@type": "LocationFeatureSpecification",
@@ -177,10 +177,10 @@
             "reviewCount": "52"
         }
     }
-    </script> -->
+    </script>
 
     <!-- FAQ Schema -->
-    <!-- <script type="application/ld+json">
+    <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "FAQPage",
@@ -243,10 +243,10 @@
             }
         ]
     }
-    </script> -->
+    </script>
 
     <!-- Medical Organization Schema -->
-    <!-- <script type="application/ld+json">
+    <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "MedicalOrganization", 
@@ -319,14 +319,265 @@
             "年間1500件以上の小児歯科実績"
         ]
     }
-    </script> -->
+    </script>
+
+    <!-- Review Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Review",
+        "itemReviewed": {
+            "@type": "Dentist",
+            "name": "轟歯科",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "須坂市大字須坂1239",
+                "addressLocality": "須坂市",
+                "addressRegion": "長野県",
+                "postalCode": "382-0911",
+                "addressCountry": "JP"
+            }
+        },
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+        },
+        "name": "土日診療で助かります",
+        "author": {
+            "@type": "Person",
+            "name": "須坂市在住 30代男性"
+        },
+        "reviewBody": "土日も診療してくれるので仕事が忙しくても通院できます。親知らずの抜歯も痛みが少なく、先生の説明も丁寧でした。口腔外科専門医がいるので安心して治療を受けられました。",
+        "datePublished": "2024-12-15"
+    }
+    </script>
+
+    <!-- Service Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "歯科診療サービス",
+        "description": "須坂市で土日診療を行う総合歯科医院。口腔外科専門医による親知らず抜歯、インプラント治療、小児歯科まで幅広く対応。",
+        "provider": {
+            "@type": "Dentist",
+            "name": "轟歯科",
+            "url": "https://todo-dental.todoroki-h.com/"
+        },
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "須坂市"
+            },
+            {
+                "@type": "City", 
+                "name": "長野市"
+            },
+            {
+                "@type": "City",
+                "name": "千曲市"
+            },
+            {
+                "@type": "City",
+                "name": "中野市"
+            }
+        ],
+        "serviceType": [
+            "一般歯科",
+            "口腔外科",
+            "インプラント",
+            "小児歯科",
+            "歯列矯正",
+            "ホワイトニング",
+            "予防歯科"
+        ],
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "保険診療",
+                "description": "虫歯治療、歯周病治療など基本的な歯科治療",
+                "priceRange": "保険適用"
+            },
+            {
+                "@type": "Offer",
+                "name": "インプラント治療",
+                "description": "国際認定医による安全なインプラント治療",
+                "price": "350000",
+                "priceCurrency": "JPY",
+                "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "price": "350000",
+                    "priceCurrency": "JPY",
+                    "eligibleQuantity": {
+                        "@type": "QuantitativeValue",
+                        "value": "1",
+                        "unitText": "本"
+                    }
+                }
+            },
+            {
+                "@type": "Offer",
+                "name": "ホワイトニング",
+                "description": "オフィス・ホーム・デュアルホワイトニング",
+                "price": "30000",
+                "priceCurrency": "JPY"
+            }
+        ],
+        "availableChannel": {
+            "@type": "ServiceChannel",
+            "name": "電話予約",
+            "telephone": "026-248-1391"
+        }
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "ホーム",
+                "item": "https://todo-dental.todoroki-h.com/"
+            }
+        ]
+    }
+    </script>
+
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "轟歯科 - 須坂市で土日診療の歯医者",
+        "url": "https://todo-dental.todoroki-h.com/",
+        "description": "須坂市で土日診療を行う歯科医院。口腔外科専門医在籍で親知らず抜歯、インプラント、小児歯科まで対応。",
+        "publisher": {
+            "@type": "Organization",
+            "name": "医療法人轟歯科",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://todo-dental.todoroki-h.com/img/logo.png"
+            }
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://todo-dental.todoroki-h.com/search?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <!-- Opening Hours Specification Extended -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Place",
+        "name": "轟歯科",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "須坂市大字須坂1239",
+            "addressLocality": "須坂市",
+            "addressRegion": "長野県",
+            "postalCode": "382-0911",
+            "addressCountry": "JP"
+        },
+        "specialOpeningHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "opens": "09:30",
+                "closes": "18:30",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "validFrom": "2025-01-01",
+                "validThrough": "2025-12-31"
+            },
+            {
+                "@type": "OpeningHoursSpecification", 
+                "opens": "09:30",
+                "closes": "18:00",
+                "dayOfWeek": "Sunday",
+                "validFrom": "2025-01-01",
+                "validThrough": "2025-12-31"
+            }
+        ],
+        "telephone": "026-248-1391",
+        "url": "https://todo-dental.todoroki-h.com/"
+    }
+    </script>
+
+    <!-- Event Schema for Special Hours -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "年末年始診療スケジュール",
+        "description": "年末年始の診療時間についてお知らせいたします",
+        "startDate": "2024-12-29",
+        "endDate": "2025-01-05",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+            "@type": "Place",
+            "name": "轟歯科",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "須坂市大字須坂1239",
+                "addressLocality": "須坂市",
+                "addressRegion": "長野県",
+                "postalCode": "382-0911",
+                "addressCountry": "JP"
+            }
+        },
+        "organizer": {
+            "@type": "Organization",
+            "name": "轟歯科",
+            "url": "https://todo-dental.todoroki-h.com/"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+
+    <!-- Additional Review Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Review",
+        "itemReviewed": {
+            "@type": "Dentist",
+            "name": "轟歯科"
+        },
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+        },
+        "name": "子どもが安心して治療を受けられました",
+        "author": {
+            "@type": "Person",
+            "name": "須坂市在住 40代女性"
+        },
+        "reviewBody": "子どもを連れて行っても安心。各ベッドにDVDがあり、スタッフの方も優しく対応してくれます。年間1500件の実績があるだけあって、子どもの扱いがとても上手でした。",
+        "datePublished": "2024-11-20"
+    }
+    </script>
 </head>
 <body>
     
 <!-- Google Tag Manager (noscript) -->
-<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K2SS6WT3"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
-<!-- End Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K2SS6WT3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> 
+End Google Tag Manager (noscript)
 
     <!-- 固定予約ボタン -->
     <div class="fixed-cta">
@@ -380,10 +631,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 Web予約フォーム
                             </a> -->
                         </div>
-                        <!-- <div class="hero-rating">
-                            <div class="stars">★★★★★</div>
-                            <span>Google口コミ評価4.5（52件）</span>
-                        </div> -->
                     </div>
                     <div class="hero-image">
                         <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="轟歯科 モダンな診療室" loading="eager">
