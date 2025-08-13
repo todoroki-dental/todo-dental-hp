@@ -33,6 +33,261 @@
 }
 
 
+/* PDT治療詳細セクション */
+.pdt-toggle {
+    background: linear-gradient(135deg, #e06d6e, #d84545);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    margin: 0.5rem 0;
+    transition: background 0.3s ease;
+}
+
+.pdt-toggle:hover {
+    background: linear-gradient(135deg, #d84545, #c73e39);
+}
+
+.pdt-toggle.active {
+    background: linear-gradient(135deg, #c73e39, #b33530);
+}
+
+.pdt-details {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 0.5rem;
+    border: 1px solid #e9ecef;
+}
+
+.pdt-section {
+    margin-bottom: 1.5rem;
+}
+
+.pdt-section:last-child {
+    margin-bottom: 0;
+}
+
+.pdt-section h4 {
+    color: #e06d6e;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.pdt-section ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.pdt-section ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.pdt-section p {
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    color: #333;
+}
+
+/* プロフェッショナルケア */
+.professional-care-buttons {
+    margin-top: 0.75rem;
+}
+
+.care-toggle {
+    background: #f8f9fa;
+    border: 2px solid #e06d6e;
+    color: #e06d6e;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    margin: 0.25rem 0.5rem 0.25rem 0;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.care-toggle:hover {
+    background: #e06d6e;
+    color: white;
+}
+
+.care-toggle.active {
+    background: #e06d6e;
+    color: white;
+}
+
+.care-details {
+    margin: 0.75rem 0;
+    padding: 1rem;
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.care-section h5 {
+    color: #e06d6e;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.care-section p {
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.care-price {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.price-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #e06d6e;
+}
+
+.price-note {
+    font-size: 0.8rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* 虫歯治療詳細 */
+.treatment-toggle {
+    background: #f8f9fa;
+    border: 2px solid #e06d6e;
+    color: #e06d6e;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    margin: 0.5rem 0;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.treatment-toggle:hover {
+    background: #e06d6e;
+    color: white;
+}
+
+.treatment-toggle.active {
+    background: #e06d6e;
+    color: white;
+}
+
+.treatment-details {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.treatment-section h5 {
+    color: #e06d6e;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.treatment-section p {
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    color: #333;
+}
+
+.treatment-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.treatment-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.image-caption {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+.treatment-price {
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.treatment-price .price-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #e06d6e;
+}
+
+.treatment-steps {
+    margin: 1.5rem 0;
+}
+
+.treatment-steps ol {
+    padding-left: 1.5rem;
+    counter-reset: step-counter;
+}
+
+.treatment-steps ol li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    position: relative;
+    list-style: none;
+    counter-increment: step-counter;
+    padding-left: 0.5rem;
+}
+
+.treatment-steps ol li::before {
+    content: "①" counter(step-counter, decimal);
+    position: absolute;
+    left: -2rem;
+    background: #e06d6e;
+    color: white;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.treatment-steps ol li:nth-child(1)::before { content: "①"; }
+.treatment-steps ol li:nth-child(2)::before { content: "②"; }
+.treatment-steps ol li:nth-child(3)::before { content: "③"; }
+.treatment-steps ol li:nth-child(4)::before { content: "④"; }
+.treatment-steps ol li:nth-child(5)::before { content: "⑤"; }
+.treatment-steps ol li:nth-child(6)::before { content: "⑥"; }
+.treatment-steps ol li:nth-child(7)::before { content: "⑦"; }
+.treatment-steps ol li:nth-child(8)::before { content: "⑧"; }
+
 /* デスクトップ対応 (1024px以上) */
 @media (min-width: 1024px) {
     .treatment-grid {
@@ -45,6 +300,58 @@
     
     .breadcrumb-list li:not(:last-child)::after {
         margin-left: 0.9375rem;
+    }
+    
+    .pdt-toggle {
+        font-size: 1rem;
+        padding: 0.625rem 1.25rem;
+    }
+    
+    .pdt-details {
+        padding: 1.5rem;
+    }
+    
+    .pdt-section h4 {
+        font-size: 1.2rem;
+    }
+    
+    .care-toggle {
+        font-size: 1rem;
+        padding: 0.625rem 1.25rem;
+    }
+    
+    .care-details {
+        padding: 1.5rem;
+    }
+    
+    .care-section h5 {
+        font-size: 1.1rem;
+    }
+    
+    .price-value {
+        font-size: 1.2rem;
+    }
+    
+    .treatment-toggle {
+        font-size: 1rem;
+        padding: 0.625rem 1.25rem;
+    }
+    
+    .treatment-details {
+        padding: 2rem;
+    }
+    
+    .treatment-section h5 {
+        font-size: 1.2rem;
+    }
+    
+    .treatment-images {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .treatment-price .price-value {
+        font-size: 1.2rem;
     }
 }
 
@@ -281,7 +588,7 @@
 }
 
 .flow-content {
-    padding: 3.125rem 1.875rem 1.875rem;
+    padding: 1.125rem 1rem 1.875rem;
     position: relative;
 }
 

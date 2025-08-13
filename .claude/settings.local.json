@@ -11,7 +11,11 @@
       "Bash(git checkout:*)",
       "Bash(git push:*)",
       "Bash(git merge:*)",
-      "Bash(git branch:*)"
+      "Bash(git branch:*)",
+      "Bash(ls:*)",
+      "Bash(git fetch:*)",
+      "Bash(git config:*)",
+      "Bash(gh auth:*)"
     ],
     "deny": []
   }

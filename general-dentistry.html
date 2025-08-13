@@ -100,13 +100,180 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <h3>虫歯治療</h3>
                             <p class="menu-detail-desc">初期虫歯から重度の虫歯まで、進行度に応じた最適な治療を提供</p>
                             <ul class="menu-detail-list">
-                                <li><strong>C0・C1（初期虫歯）</strong><br>経過観察・生活指導<br><a href="https://www.todoroki-h.com/caries-treatment"><button class="menu-detail-btn">治療内容を詳しく見る</button></a></li>
-                                <li><strong>C2（中程度虫歯）</strong><br>コンポジットレジン充填・インレー<br><a href="https://www.todoroki-h.com/caries-treatment"><button class="menu-detail-btn">治療内容を詳しく見る</button></a></li>
-                                <li><strong>C3（重度虫歯）</strong><br>根管治療・クラウン修復<br><a href="https://www.todoroki-h.com/caries-treatment"><button class="menu-detail-btn">治療内容を詳しく見る</button></a></li>
-                                <li><strong>C4（残根状態）</strong><br>抜歯・インプラント・義歯検討</li>
+                                <li>
+                                    <strong>C0・C1（初期虫歯）</strong><br>経過観察・生活指導<br>
+                                    <!-- <button class="treatment-toggle" onclick="toggleTreatmentDetails('c0c1')">治療内容を詳しく見る</button> -->
+                                    <!-- <div class="treatment-details" id="c0c1Details" style="display: none;">
+                                        <div class="treatment-section">
+                                            <h5>少し削って詰めるだけ</h5>
+                                            <p><strong>治療に必要な通院回数</strong>　1-2回</p>
+                                            <p>早期に発見できた浅い段階の虫歯はほぼ一回の治療で完了します。虫歯を少し削り、削った所に光で固まる特殊な樹脂を詰めて終了です。</p>
+                                            <p>その後は定期的な歯科検診を受け、歯の健康維持を心がけましょう。</p>
+                                            
+                                            <div class="treatment-images">
+                                                <div class="treatment-image">
+                                                    <img src="./img/general/general_tools1.avif" alt="青い光で樹脂を固める様子">
+                                                    <p class="image-caption">青い光で樹脂を固めます</p>
+                                                </div>
+                                                <div class="treatment-image">
+                                                    <img src="./img/general/general_tools3.avif" alt="様々な色の樹脂">
+                                                    <p class="image-caption">自分の自然な歯の色に合わせるために様々な色の樹脂を揃えています。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                </li>
+                                <li>
+                                    <strong>C2（中程度虫歯）</strong><br>コンポジットレジン充填・インレー<br>
+                                    <button class="treatment-toggle" onclick="toggleTreatmentDetails('c2')">治療内容を詳しく見る</button>
+                                    <div class="treatment-details" id="c2Details" style="display: none;">
+                                        <div class="treatment-section">
+                                            <h5>少し削って詰めるだけ</h5>
+                                            <p><strong>治療に必要な通院回数</strong>　1-2回</p>
+                                            <p>早期に発見できた浅い段階の虫歯はほぼ一回の治療で完了します。虫歯を少し削り、削った所に光で固まる特殊な樹脂を詰めて終了です。</p>
+                                            <p>その後は定期的な歯科検診を受け、歯の健康維持を心がけましょう。</p>
+                                            
+                                            <div class="treatment-images">
+                                                <div class="treatment-image">
+                                                        <img src="./img/general/general_tools2.avif" alt="青い光で樹脂を固める様子">
+                                                    <p class="image-caption">青い光で樹脂を固めます</p>
+                                                </div>
+                                                <div class="treatment-image">
+                                                    <img src="./img/general/general_tools3.avif" alt="様々な色の樹脂">
+                                                    <p class="image-caption">自分の自然な歯の色に合わせるために様々な色の樹脂を揃えています。</p>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            
+                                            <h5>削って型を取って詰め物をする</h5>
+                                            <p><strong>治療に必要な通院回数</strong>　1-2回</p>
+                                            <p>神経には達していないものの、歯を大きく削る必要がある場合の治療方法です。</p>
+                                            
+                                            <div class="treatment-steps">
+                                                <ol>
+                                                    <li>虫歯部分を削る</li>
+                                                    <li>削った部分の型を取る</li>
+                                                    <li>歯科技工士に依頼して詰め物を作る（金属または樹脂）</li>
+                                                    <li>微調整しながら歯に埋め込む</li>
+                                                </ol>
+                                            </div>
+                                            <p>​という工程で治療します。おおよそ２回の通院で完了します。</p>
+                                            <p>その後は定期的な歯科検診を受け、歯の健康維持を心がけましょう。</p>
+                                            
+                                            <div class="treatment-images">
+                                                <div class="treatment-image">
+                                                    <img src="./img/general/general-inlay.avif" alt="青い光で樹脂を固める様子">
+                                                    <p class="image-caption">自然な色の詰め物と金属の詰め物があります</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>C3（重度虫歯）</strong><br>根管治療・クラウン修復<br>
+                                    <button class="treatment-toggle" onclick="toggleTreatmentDetails('c3')">治療内容を詳しく見る</button>
+                                    <div class="treatment-details" id="c3Details" style="display: none;">
+                                        <div class="treatment-section">
+                                            <h5>根管治療・クラウン修復</h5>
+                                            <p><strong>治療に必要な通院回数</strong>　複数回</p>
+                                            
+                                            <p>神経まで達した虫歯は治療期間が長くかかります。虫歯を除去するだけでなく、歯の根元をしっかりと治療して綺麗にしないと奥の方で再発してしまいます。ですから時間を掛けて、時には薬を変えたりしてしっかりと治療しますのでどうしても時間がかかります。</p>
+                                            
+                                            <div class="treatment-steps">
+                                                <ol>
+                                                    <li>虫歯を削る</li>
+                                                    <li>神経を抜いて掃除する</li>
+                                                    <li>歯の根元を綺麗にする薬を入れて経過観察（この段階が時間がかかります）</li>
+                                                    <li>根元が綺麗になったら神経の代わりに薬を詰める</li>
+                                                    <li>歯の土台の型取りをする</li>
+                                                    <li>土台を入れる</li>
+                                                    <li>土台を入れたら歯の代わりになる冠用の型をとる</li>
+                                                    <li>微調整しながら冠をつける</li>
+                                                </ol>
+                                            </div>
+                                            
+                                            <p>という長い過程を経て治療します。</p>
+                                            
+                                            <p>知人から「あそこの歯科はえらく長く通わせる」という声を聞いたことがあるかもしれません。もしかしたらその虫歯は神経まで達した虫歯かもしれません。</p>
+                                            
+                                            <p>この段階になる前に早く発見しましょう。当院では歯の健康診断を800円で受けられます。</p>
+                                            
+                                            <div class="treatment-images">
+                                                <div class="treatment-image">
+                                                    <img src="./img/general/general_tools.avif" alt="神経を治療する機器">
+                                                    <p class="image-caption">神経を治療する機器</p>
+                                                </div>
+                                                <div class="treatment-image">
+                                                    <img src="./img/general/general_tools_monitor.avif" alt="根管治療の様子">
+                                                    <p class="image-caption">神経の深さを測る機械</p>
+                                                </div>
+                                                <div class="treatment-image">
+                                                    <img src="./img/general/general_crown1.avif" alt="クラウン（被せ物）装着">
+                                                    <p class="image-caption">左は保険適用のクラウン</p>
+                                                </div>
+                                                <div class="treatment-image">
+                                                    <img src="./img/general/general_crown2.avif" alt="クラウン（被せ物）装着">
+                                                    <p class="image-caption">右は自費診療のクラウン</p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="treatment-price">
+                                                <span class="price-value">保険適用</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>C4（抜歯が必要な状態）</strong><br>抜歯・インプラント・義歯検討<br>
+                                    <button class="treatment-toggle" onclick="toggleTreatmentDetails('c4')">治療内容を詳しく見る</button>
+                                    <div class="treatment-details" id="c4Details" style="display: none;">
+                                        <div class="treatment-section">
+                                            <h5>抜歯・インプラント・義歯検討</h5>
+                                            <p><strong>治療に必要な通院回数</strong>　複数回</p>
+                                            
+                                            <p>虫歯がより進行した場合や顎の骨の状態、虫歯の位置により、上記の治療が適さないと考えられる場合は抜歯を選択します。</p>
+                                            
+                                            <p>抜歯後は以下の４つの選択肢があります</p>
+                                            
+                                            <div class="treatment-steps">
+                                                <ol>
+                                                    <li>そのままにする（親知らず　等）</li>
+                                                    <li>ブリッジにする</li>
+                                                    <li>部分入れ歯にする</li>
+                                                    <li>インプラントにする</li>
+                                                </ol>
+                                            </div>
+                                            
+                                            <p>それぞれに特徴があり、歯の位置・歯の状態・顎の骨の状態などにより適応が異なります。また、保険適用の有無や素材などで価格も異なります。</p>
+                                            
+                                            <p>当歯科では患者さんとしっかり話し合いながら決定していきます。</p>
+                                            
+                                            <div class="treatment-images">
+                                                <div class="treatment-image">
+                                                    <img src="./img/general/general_bridge.png" alt="ブリッジ装着前後">
+                                                    <p class="image-caption"><strong>ブリッジ</strong><br>ブリッジ　左）装着時　　右）装着前<br>抜歯した歯の両側が元気な場合はブリッジを選択できます</p>
+                                                </div>
+                                                <div class="treatment-image">
+                                                    <img src="./img/general/general_partial_dentures.avif" alt="部分入れ歯">
+                                                    <p class="image-caption"><strong>部分入れ歯</strong><br>写真は保険適用の部分入れ歯ですが、金属バネが見えてしまいます。自費にはなりますが、装着していても目立たない、全て樹脂でできたノンクラスプデンチャーというタイプを選択することもできます。</p>
+                                                </div>
+                                                <div class="treatment-image">
+                                                    <img src="./img/general/general_implant.avif" alt="インプラント治療">
+                                                    <p class="image-caption"><strong>インプラント</strong><br>当院ではインプラント認定医が施術します</p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="treatment-price">
+                                                <span class="price-value">保険適用・自費診療</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                             <div class="menu-price">
-                                <span class="price-label">保険適用</span>
+                                <span class="price-label">保険適用・自費診療（費用や機能を比較しながら選択できます）</span>
                                 <!-- <span class="price-value">加入保険、年齢等によります</span> -->
                             </div>
                         </div>
@@ -126,12 +293,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-type">根管治療が必要</div>
-                            <div class="timeline-period">3〜6回</div>
+                            <div class="timeline-period">平均3〜6回</div>
                         </div>
                     </div>
                 </div>
 
-                    <div class="menu-detail-item">
+                    <!-- <div class="menu-detail-item">
                         <div class="menu-detail-image">
                             <img src="./img/general/nerveTreatment.jpg" alt="根管治療">
                         </div>
@@ -146,7 +313,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <span class="price-label">保険適用</span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="menu-detail-item" style="background-color: rgba(224, 109, 111, 0.185);">
                         <div class="menu-detail-image">
@@ -154,13 +321,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                         <div class="menu-detail-content">
                             <h3>歯周病治療</h3>
-                            <p class="menu-detail-desc">歯茎の腫れ・出血から重度歯周病まで段階的治療</p>
+                            <p class="menu-detail-desc">　25歳以上の約80％の人が歯周病と言われています。歯周病は歯茎と骨に大きなダメージを与えるため、進行すると歯が抜け落ちてしまいます。また最近の研究では心筋梗塞狭心症にも大きく関わっていると言われています。歯周病は単なる口腔内だけの病気ではなく全身の健康に関わっているのです。
+
+　人の口の中には約500種類以上の細菌が生息しています。その中の数種類の菌が歯周病を引き起こし炎症が起こり始めます。従来、歯周病菌に対する処置方は抗生物質の投与が一般的でした。しかし、抗生物質は細菌に対し非常に有効ですが、長期使用により耐性菌が生産され、あまり効かなくなってしまうのです。</p>
                             <ul class="menu-detail-list">
                                 <li><strong>歯周基本治療</strong><br>スケーリング・ルートプレーニング</li>
                                 <li><strong>歯周外科治療</strong><br>フラップ手術・歯周組織再生療法</li>
                                 <li><strong>メンテナンス</strong><br>3〜6ヶ月ごとの定期管理</li>
                                 <li><strong>生活指導</strong><br>正しいブラッシング指導</li>
-                                <li><strong>PDT治療</strong><br>光線により歯周病菌を殺菌</li>
+                                <li>
+                                    <strong>PDT治療</strong><br>光線により歯周病菌を殺菌
+                                    <button class="pdt-toggle" onclick="togglePDTDetails()">詳しく見る</button>
+                                    <div class="pdt-details" id="pdtDetails" style="display: none;">
+                                        <div class="pdt-section">
+                                            <h4>PDT治療の特徴</h4>
+                                            <ul>
+                                                <li>薬を一切使用しない</li>
+                                                <li>耐性菌が発生しない</li>
+                                                <li>副作用が起こりにくい</li>
+                                                <li>全く痛みを伴わない</li>
+                                                <li>手軽に何回でも処置できる</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div class="pdt-section">
+                                            <h4>適応症例</h4>
+                                            <p>歯肉炎、歯周炎、根管治療、インプラント周囲炎、ヘルペス、口内炎、カンジダ炎</p>
+                                        </div>
+                                        
+                                        <div class="pdt-section">
+                                            <h4>治療できない場合</h4>
+                                            <ul>
+                                                <li>無カタラーゼ症の方（体内中のカタラーゼが不足し、過酸化水素が分解できなくなる病気）</li>
+                                                <li>光過敏性発作の方（視覚に飛び込んだ光刺激に対する異常反応の症状）</li>
+                                                <li>クロルへキシンアレルギーの方</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div class="pdt-section">
+                                            <h4>PDT治療の流れ</h4>
+                                            <p>轟病院ではＰＤＴ治療に「ぺリオウェーブ」システムを使用しています。ぺリオウェーブは人体に安全で、熱による侵収も無く痛みを伴いません。</p>
+                                            <p>メチレンブルーを主成分とするバイオジェルを歯周ポケットに注入し赤色の無熱レーザーを1分間照射します。するとバイオジェルとレーザーが反応し局所的にラジカルを発生させ細菌を死滅させます。おおよそ1000〜１万分の１まで減らせるといわれています。これは従来の方法の10から100倍の効果です。</p>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                             <div class="menu-price">
                                 <span class="price-label">保険適用・PDTは自由診療</span>
@@ -174,20 +378,74 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                         <div class="menu-detail-content">
                             <h3>予防歯科・定期検診</h3>
-                            <p class="menu-detail-desc">虫歯・歯周病を未然に防ぐ予防重視の診療</p>
+                            <p class="menu-detail-desc">定期的な検診とお手入れが、虫歯・歯周病を未然に防ぎ、長く自前の歯を使うコツです</p>
                             <ul class="menu-detail-list">
                                 <li><strong>定期検診</strong><br>3〜6ヶ月ごとの口腔内チェック</li>
-                                <li><strong>プロフェッショナルケア</strong><br>PMTC・フッ素塗布</li>
                                 <li><strong>口腔衛生指導</strong><br>患者様に合った清掃方法</li>
                                 <li><strong>早期発見・早期治療</strong><br>小さな変化も見逃しません</li>
+                                <li>
+                                    <strong>プロフェッショナルケア</strong>
+                                    <div class="professional-care-buttons">
+                                        <button class="care-toggle" onclick="toggleCareDetails('fluoride')">フッ素塗布</button>
+                                        <div class="care-details" id="fluorideDetails" style="display: none;">
+                                            <div class="care-section">
+                                                <h5>フッ素塗布</h5>
+                                                <p>歯質を強化し、虫歯の発生を予防する効果的な処置です。定期的な塗布により、歯の再石灰化を促進し、虫歯リスクを大幅に軽減します。</p>
+                                                <div class="care-price">
+                                                    <span class="price-value">2,700円/3回セット</span>
+                                                    <span class="price-note">（自費診療）</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <button class="care-toggle" onclick="toggleCareDetails('brushing')">ブラシクリーニング</button>
+                                        <div class="care-details" id="brushingDetails" style="display: none;">
+                                            <div class="care-section">
+                                                <h5>ブラシクリーニング</h5>
+                                                <p>コンパウンドと回転ブラシを使用して、歯ブラシでは除去できない細かな汚れや着色を丁寧に除去します。歯本来の白さを取り戻し、口腔内を清潔に保ちます。</p>
+                                                <div class="care-price">
+                                                    <span class="price-value">1,100円</span>
+                                                    <span class="price-note">（自費診療）</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <button class="care-toggle" onclick="toggleCareDetails('scaling')">スケーリング</button>
+                                        <div class="care-details" id="scalingDetails" style="display: none;">
+                                            <div class="care-section">
+                                                <h5>スケーリング</h5>
+                                                <p>スケーラーを使用して、歯石や歯垢を徹底的に除去します。歯周病の予防・改善に最も効果的な基本治療です。
+                                                    <br>値段にブラシクリーニングを含みます。
+                                                    <br>※一回で除去できない重度の歯石は複数回の通院が必要です。</p>
+                                                <div class="care-price">
+                                                    <span class="price-value">2,200円/回</span>
+                                                    <span class="price-note">（自費診療）</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <button class="care-toggle" onclick="toggleCareDetails('powder')">パウダークリーニング</button>
+                                        <div class="care-details" id="powderDetails" style="display: none;">
+                                            <div class="care-section">
+                                                <h5>パウダークリーニング</h5>
+                                                <p>微細なパウダーを高圧で噴射し、歯面の着色やバイオフィルムを効果的に除去します。痛みが少なく、短時間で美しい仕上がりを実現します。
+                                                    <br>値段にブラシクリーニングと、スケーリングを含みます</p>
+                                                <div class="care-price">
+                                                    <span class="price-value">6,600円/回</span>
+                                                    <span class="price-note">（自費診療）</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                             <div class="menu-price">
-                                <span class="price-label">自費診療</span>
+                                <span class="price-label">健診のみの場合　880円 /回</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="menu-detail-item">
+                    <!-- <div class="menu-detail-item">
                         <div class="menu-detail-image">
                             <img src="./img/general/part_denture.jpg" alt="入れ歯・ブリッジ">
                         </div>
@@ -195,16 +453,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <h3>入れ歯・ブリッジ</h3>
                             <p class="menu-detail-desc">失った歯を補う義歯治療で、快適な咀嚼機能を回復</p>
                             <ul class="menu-detail-list">
-                                <!-- <li><strong>部分入れ歯</strong><br>1〜数本の歯の欠損に対応</li> -->
                                 <li><strong>総入れ歯</strong><br>全ての歯を失った方に</li>
                                 <li><strong>ブリッジ</strong><br>固定式で自然な噛み心地</li>
                                 <li><strong>精密な型取り</strong><br>フィット感の良い義歯製作</li>
                             </ul>
                             <div class="menu-price">
-                                <span class="price-label">保険適用</span>
+                                <span class="price-label">保険適用・自費診療</span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="menu-detail-item">
                         <div class="menu-detail-image">
@@ -240,12 +497,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <h3>初診・カウンセリング</h3>
                             <div class="flow-details">
                                 <div class="flow-image">
-                                    <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="初診カウンセリング">
+                                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="初診カウンセリング">
                                 </div>
                                 <div class="flow-text">
-                                    <p><strong>所要時間：30〜45分</strong></p>
+                                    <!-- <p><strong>所要時間：30〜45分</strong></p> -->
                                     <ul>
-                                        <li>問診票記入・症状の詳しいヒアリング</li>
+                                        <li>問診・症状の詳しいヒアリング</li>
                                         <li>お口の中の状態を丁寧にチェック</li>
                                         <li>痛みがある場合は応急処置</li>
                                         <li>治療に対するご希望・不安の確認</li>
@@ -265,7 +522,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <h3>精密検査・診断</h3>
                             <div class="flow-details">
                                 <div class="flow-image">
-                                    <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="レントゲン検査">
+                                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="レントゲン検査">
                                 </div>
                                 <div class="flow-text">
                                     <ul>
@@ -288,7 +545,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <h3>治療計画の説明・同意</h3>
                             <div class="flow-details">
                                 <div class="flow-image">
-                                    <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="治療説明">
+                                    <!-- <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="治療説明"> -->
                                 </div>
                                 <div class="flow-text">
                                     <ul>
@@ -378,7 +635,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
 
-                <div class="flow-summary">
+                <!-- <div class="flow-summary">
                     <h3>治療期間の目安</h3>
                     <div class="flow-timeline">
                         <div class="timeline-item">
@@ -394,7 +651,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="timeline-period">3〜6回</div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
 

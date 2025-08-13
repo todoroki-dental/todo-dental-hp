@@ -1,4 +1,48 @@
 // DOM読み込み完了後に実行
+// PDT治療詳細の表示/非表示を切り替える関数
+function togglePDTDetails() {
+    const details = document.getElementById('pdtDetails');
+    const button = document.querySelector('.pdt-toggle');
+    
+    if (details.style.display === 'none' || details.style.display === '') {
+        details.style.display = 'block';
+        button.textContent = '閉じる';
+        button.classList.add('active');
+    } else {
+        details.style.display = 'none';
+        button.textContent = '詳しく見る';
+        button.classList.remove('active');
+    }
+}
+
+// プロフェッショナルケア詳細の表示/非表示を切り替える関数
+function toggleCareDetails(careType) {
+    const details = document.getElementById(careType + 'Details');
+    const button = event.target;
+    
+    if (details.style.display === 'none' || details.style.display === '') {
+        details.style.display = 'block';
+        button.classList.add('active');
+    } else {
+        details.style.display = 'none';
+        button.classList.remove('active');
+    }
+}
+
+// 虫歯治療詳細の表示/非表示を切り替える関数
+function toggleTreatmentDetails(treatmentType) {
+    const details = document.getElementById(treatmentType + 'Details');
+    const button = event.target;
+    
+    if (details.style.display === 'none' || details.style.display === '') {
+        details.style.display = 'block';
+        button.classList.add('active');
+    } else {
+        details.style.display = 'none';
+        button.classList.remove('active');
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     
     // 共通ヘッダーの読み込み
@@ -308,7 +352,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // ホワイトニングページのタブ切り替え機能
     const flowTabs = document.querySelectorAll('.flow-tab');
-    const flowContents = document.querySelectorAll('.flow-content');
+    const flowContents = document.querySelectorAll('.whitening-flow-content');
     
     flowTabs.forEach(tab => {
         tab.addEventListener('click', function() {
