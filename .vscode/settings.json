@@ -1,7 +1,6 @@
 
   {
     "liveServer.settings.port": 5501,
-    "liveServer.settings.CustomBrowser": "default",
     "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
     "liveServer.settings.NoBrowser": true,
     "liveServer.settings.ignoreFiles": [
