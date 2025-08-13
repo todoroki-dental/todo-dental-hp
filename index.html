@@ -321,37 +321,6 @@
     }
     </script>
 
-    <!-- Review Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Review",
-        "itemReviewed": {
-            "@type": "Dentist",
-            "name": "轟歯科",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "須坂市大字須坂1239",
-                "addressLocality": "須坂市",
-                "addressRegion": "長野県",
-                "postalCode": "382-0911",
-                "addressCountry": "JP"
-            }
-        },
-        "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-        },
-        "name": "土日診療で助かります",
-        "author": {
-            "@type": "Person",
-            "name": "須坂市在住 30代男性"
-        },
-        "reviewBody": "土日も診療してくれるので仕事が忙しくても通院できます。親知らずの抜歯も痛みが少なく、先生の説明も丁寧でした。口腔外科専門医がいるので安心して治療を受けられました。",
-        "datePublished": "2024-12-15"
-    }
-    </script>
 
     <!-- Service Schema -->
     <script type="application/ld+json">
@@ -375,12 +344,20 @@
                 "name": "長野市"
             },
             {
+                "@type": "City", 
+                "name": "中野市"
+            },
+            {
                 "@type": "City",
                 "name": "千曲市"
             },
             {
-                "@type": "City",
-                "name": "中野市"
+                "@type": "town",
+                "name": "小布施町"
+            },
+            {
+                "@type": "town",
+                "name": "高山村"
             }
         ],
         "serviceType": [
@@ -390,6 +367,7 @@
             "小児歯科",
             "歯列矯正",
             "ホワイトニング",
+            "歯科検診",
             "予防歯科"
         ],
         "offers": [
@@ -548,29 +526,7 @@
     }
     </script>
 
-    <!-- Additional Review Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Review",
-        "itemReviewed": {
-            "@type": "Dentist",
-            "name": "轟歯科"
-        },
-        "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-        },
-        "name": "子どもが安心して治療を受けられました",
-        "author": {
-            "@type": "Person",
-            "name": "須坂市在住 40代女性"
-        },
-        "reviewBody": "子どもを連れて行っても安心。各ベッドにDVDがあり、スタッフの方も優しく対応してくれます。年間1500件の実績があるだけあって、子どもの扱いがとても上手でした。",
-        "datePublished": "2024-11-20"
-    }
-    </script>
+
 </head>
 <body>
     
