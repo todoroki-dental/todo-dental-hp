@@ -593,6 +593,93 @@ a {
     box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.1);
 }
 
+/* 動画スタイル */
+.hero-video {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.9375rem;
+    box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.1);
+    aspect-ratio: 16/9;
+    background-color: #f8f9fa;
+}
+
+.hero-video video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 0.9375rem;
+}
+
+/* モバイル専用の動画調整 */
+@media (max-width: 767px) {
+    .hero-video {
+        aspect-ratio: 16/9;
+        min-height: 12rem;
+        /* height: auto; */
+    }
+    .hero-video p {
+        text-align: center;
+        padding-top: 0.5rem;
+        color: #e06d6e;
+    }
+}
+
+.hero-video p {
+    text-align: center;
+}
+
+/* ミュートボタン（モバイルファースト） */
+.mute-toggle {
+    position: absolute;
+    bottom: 0.3rem;
+    right: 0rem;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    z-index: 10;
+    touch-action: manipulation;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.mute-toggle:hover {
+    transform: scale(1.1);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 1);
+}
+
+.mute-toggle:active {
+    transform: scale(0.95);
+}
+
+.mute-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* デスクトップ対応 */
+@media (min-width: 768px) {
+    .mute-toggle {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.25rem;
+        bottom: 0.75rem;
+        right: 0.75rem;
+    }
+
+    .mute-icon {
+        font-size: 1.25rem;
+    }
+}
+
 /* ペイン共感セクション */
 .pain-section {
     padding: 3rem 0;
@@ -2007,6 +2094,7 @@ a {
 
 /* Core Web Vitals最適化 */
 .hero-image img,
+.hero-video video,
 .solution-image img,
 .doctor-image img {
     will-change: transform;
@@ -2015,6 +2103,10 @@ a {
 /* CLS対策 */
 .hero-image {
     /* min-height: 18.75rem; */
+}
+
+.hero-video {
+    min-height: 15rem;
 }
 
 .solution-image {

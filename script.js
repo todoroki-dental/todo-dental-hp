@@ -457,6 +457,9 @@ document.addEventListener('DOMContentLoaded', function() {
             getLCP(console.log);
         });
     }
+
+    // ヒーロー動画のミュート切り替え機能を初期化
+    initVideoMuteToggle();
 });
 
 // ページ読み込み完了時の処理
@@ -499,6 +502,39 @@ document.addEventListener('contextmenu', function(e) {
     }
 });
 */
+
+// ヒーロー動画のミュート切り替え機能
+function initVideoMuteToggle() {
+    const video = document.getElementById('heroVideo');
+    const muteToggle = document.getElementById('muteToggle');
+    const muteIcon = muteToggle?.querySelector('.mute-icon');
+
+    if (!video || !muteToggle || !muteIcon) return;
+
+    // ミュート状態をセッションストレージで管理
+    const savedMuteState = sessionStorage.getItem('videoMuted');
+    let isMuted = savedMuteState !== null ? savedMuteState === 'true' : true;
+
+    // 初期状態を設定
+    video.muted = isMuted;
+    muteIcon.textContent = isMuted ? '🔇' : '🔊';
+
+    // ボタンクリック時の処理
+    muteToggle.addEventListener('click', function() {
+        isMuted = !isMuted;
+        video.muted = isMuted;
+        muteIcon.textContent = isMuted ? '🔇' : '🔊';
+
+        // 状態を保存
+        sessionStorage.setItem('videoMuted', isMuted.toString());
+
+        // アクセシビリティ用のaria-label更新
+        muteToggle.setAttribute('aria-label', isMuted ? '音声をオンにする' : '音声をオフにする');
+    });
+
+    // 初期aria-label設定
+    muteToggle.setAttribute('aria-label', isMuted ? '音声をオンにする' : '音声をオフにする');
+}
 
 // 開発用：コンソールでの診療時間テスト
 if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
