@@ -1,8 +1,8 @@
 
   {
     "liveServer.settings.port": 5501,
-    "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
-    "liveServer.settings.NoBrowser": true,
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "chrome",
+    "liveServer.settings.NoBrowser": false,
     "liveServer.settings.ignoreFiles": [
         ".vscode/**",
         "**/*.scss",
