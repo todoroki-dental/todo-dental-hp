@@ -5,8 +5,11 @@
 # Claude Code個人設定
 .claude/settings.local.json
 
+CLAUDE.md
+
 # 個人メモ
 git.txt
 
 # エディタ
 .vscode/
+
