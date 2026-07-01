@@ -44,44 +44,12 @@ function toggleTreatmentDetails(treatmentType) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    
-    // 共通ヘッダーの読み込み
-    const headerPlaceholder = document.getElementById('header-placeholder');
-    if (headerPlaceholder) {
-        fetch('./header.html')
-            .then(response => {
-                // console.log('Header fetch response:', response.status, response.statusText);
-                if (!response.ok) {
-                    throw new Error(`Header file not found: ${response.status} ${response.statusText}`);
-                }
-                return response.text();
-            })
-            .then(data => {
-                headerPlaceholder.innerHTML = data;
-                
-                // ヘッダー読み込み後に少し待ってから初期化
-                setTimeout(() => {
-                    initializeHeaderFunctionality();
-                    initializeScrollHeader();
-                }, 100);
-            })
-            .catch(error => {
-                console.error('Error loading header:', error);
-                // フォールバック: 基本的なヘッダーを表示
-                headerPlaceholder.innerHTML = `
-<header class="header">
 
-</header>
-                `;
-             // フォールバック後でも初期化を実行
-                setTimeout(() => {
-                initializeHeaderFunctionality();
-                initializeScrollHeader();
-                }, 100);
-            });
-    }
-    
-    // ヘッダー機能の初期化（ヘッダー読み込み後に実行）
+    // 共通ヘッダー（Jekyllのincludeで静的に埋め込み済みのため初期化のみ実行）
+    initializeHeaderFunctionality();
+    initializeScrollHeader();
+
+    // ヘッダー機能の初期化
     function initializeHeaderFunctionality() {
         // ハンバーガーメニューの機能
         const hamburgerMenu = document.querySelector('.hamburger-menu');
