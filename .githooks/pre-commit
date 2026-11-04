@@ -1,0 +1,35 @@
+#!/bin/sh
+# コミット時に、変更されたHTMLに対応する sitemap.xml の <lastmod> を今日の日付に更新する
+# 有効化: git config core.hooksPath .githooks
+
+staged=$(git diff --cached --name-only --diff-filter=ACM -- '*.html')
+[ -z "$staged" ] && exit 0
+
+python3 - $staged <<'EOF' || exit 1
+import re, sys, datetime
+
+BASE = "https://todo-dental.todoroki-h.com/"
+SITEMAP = "sitemap.xml"
+today = datetime.date.today().isoformat()
+
+s = open(SITEMAP, encoding="utf-8").read()
+updated, missing = [], []
+for f in sys.argv[1:]:
+    loc = BASE + ("" if f == "index.html" else f)
+    pattern = r"(<loc>" + re.escape(loc) + r"</loc>\s*<lastmod>)[0-9-]+(</lastmod>)"
+    if re.search(pattern, s):
+        s = re.sub(pattern, r"\g<1>" + today + r"\g<2>", s)
+        updated.append(f)
+    else:
+        missing.append(f)
+
+# 副作用: sitemap.xml を書き換える
+open(SITEMAP, "w", encoding="utf-8").write(s)
+if updated:
+    print("[pre-commit] sitemap.xml の lastmod を " + today + " に更新: " + ", ".join(updated))
+if missing:
+    print("[pre-commit] sitemap.xml に未登録のため対象外: " + ", ".join(missing))
+EOF
+
+# 副作用: 更新した sitemap.xml をこのコミットに含める
+git add sitemap.xml
