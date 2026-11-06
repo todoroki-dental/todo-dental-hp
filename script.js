@@ -375,34 +375,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const minute = now.getMinutes();
         const currentTime = hour * 60 + minute;
         
-        const morningStart = 9 * 60; // 9:30
+        // 診療時間：平日・土 9:30-12:30 / 14:00-18:30、日 9:30-12:30 / 14:00-18:00
+        // ※祝日休診は判定していない（閲覧者端末の時刻で判定）
+        const morningStart = 9 * 60 + 30; // 9:30
         const morningEnd = 12 * 60 + 30; // 12:30
         const afternoonStart = 14 * 60; // 14:00
-        const weekdayEnd = 18 * 60; // 18:00（平日）
-        const weekendEnd = 17 * 60; // 17:00（土日）
-        
-        let status = '';
-        let statusClass = '';
-        
-        if (day >= 1 && day <= 5) { // 平日
-            if ((currentTime >= morningStart && currentTime < morningEnd) || 
-                (currentTime >= afternoonStart && currentTime < weekdayEnd)) {
-                status = '診療中';
-                statusClass = 'status-open';
-            } else {
-                status = '診療時間外';
-                statusClass = 'status-closed';
-            }
-        } else if (day === 6 || day === 0) { // 土日
-            if ((currentTime >= morningStart && currentTime < morningEnd) || 
-                (currentTime >= afternoonStart && currentTime < weekendEnd)) {
-                status = '診療中';
-                statusClass = 'status-open';
-            } else {
-                status = '診療時間外';
-                statusClass = 'status-closed';
-            }
-        }
+        const afternoonEnd = day === 0 ? 18 * 60 : 18 * 60 + 30; // 日 18:00 / 平日・土 18:30
+
+        const isOpen = (currentTime >= morningStart && currentTime < morningEnd) ||
+            (currentTime >= afternoonStart && currentTime < afternoonEnd);
+        const status = isOpen ? '診療中' : '診療時間外';
+        const statusClass = isOpen ? 'status-open' : 'status-closed';
         
         // ステータス表示要素があれば更新
         const statusElement = document.querySelector('.clinic-status');
